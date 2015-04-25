@@ -1,0 +1,49 @@
+---
+title: "Bank Slopes to 45 degrees"
+rdname: "bank_slopes"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r bank_slopes, cache = TRUE}
+# Use the classic sunspot data from Cleveland's orig paper
+x <- seq_along(sunspot.year)
+y <- as.numeric(sunspot.year)
+# Without banking
+m <- qplot(x, y, geom="line")
+m
+
+## Using the default method, Median Absolute Slope
+ratio <- bank_slopes(x, y)
+m + coord_fixed(ratio = ratio)
+
+## Alternative methods to calculate the banking
+bank_slopes(x, y, method="ms")
+## Using culling
+bank_slopes(x, y, method="ms", cull=TRUE)
+## Average Absolute Slope
+bank_slopes(x, y, method="as")
+bank_slopes(x, y, method="as", cull=TRUE)
+## Average Orientation
+bank_slopes(x, y, method="ao")
+bank_slopes(x, y, method="ao", cull=TRUE)
+## Average Orientation (Weighted)
+bank_slopes(x, y, method="ao", weight=TRUE)
+bank_slopes(x, y, method="ao", cull=TRUE, weight=TRUE)
+## Global Orientation Resolution
+bank_slopes(x, y, method="gor")
+bank_slopes(x, y, method="gor", cull=TRUE)
+## Local Orientation Resolution
+bank_slopes(x, y, method="lor")
+bank_slopes(x, y, method="lor", cull=TRUE)
+
+
+
+```

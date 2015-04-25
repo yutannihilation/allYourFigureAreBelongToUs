@@ -1,0 +1,22 @@
+---
+title: "Show shapes"
+rdname: "show_shapes"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r show_shapes, cache = TRUE}
+library(scales)
+show_shapes(shape_pal()(5))
+show_shapes(shape_pal()(3), labels=TRUE)
+
+
+
+```

@@ -1,0 +1,23 @@
+---
+title: "Base colors for Solarized light and dark themes"
+rdname: "solarized_rebase"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r solarized_rebase, cache = TRUE}
+library(scales)
+show_col(solarized_pal()(2))
+show_col(solarized_pal()(3))
+show_col(solarized_pal("red")(4))
+
+
+
+```

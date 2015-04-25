@@ -1,0 +1,24 @@
+---
+title: "Convert cluster instances to list("data.frame")"
+rdname: "fortify.kmeans"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r fortify.kmeans, cache = TRUE}
+fortify(stats::kmeans(iris[-5], 3))
+fortify(stats::kmeans(iris[-5], 3), data = iris)
+fortify(cluster::clara(iris[-5], 3))
+fortify(cluster::fanny(iris[-5], 3))
+fortify(cluster::pam(iris[-5], 3), data = iris)
+
+
+
+```

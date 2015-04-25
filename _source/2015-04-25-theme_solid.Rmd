@@ -1,0 +1,22 @@
+---
+title: "Theme with nothing other than a background color"
+rdname: "theme_solid"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r theme_solid, cache = TRUE}
+(ggplot(mtcars, aes(wt, mpg))
+ + geom_point()
+ + theme_solid(fill = "white"))
+
+
+
+```

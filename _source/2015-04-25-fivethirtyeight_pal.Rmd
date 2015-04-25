@@ -1,0 +1,21 @@
+---
+title: "fivethirtyeight.com color palette"
+rdname: "fivethirtyeight_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r fivethirtyeight_pal, cache = TRUE}
+library("scales")
+show_col(fivethirtyeight_pal()(3))
+
+
+
+```

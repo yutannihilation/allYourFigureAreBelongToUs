@@ -1,0 +1,23 @@
+---
+title: "Calculate components of a five-number summary"
+rdname: "stat_fivenumber"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r stat_fivenumber, cache = TRUE}
+library(scales)
+show_col(solarized_pal()(2))
+show_col(solarized_pal()(3))
+show_col(solarized_pal("red")(4))
+
+
+
+```

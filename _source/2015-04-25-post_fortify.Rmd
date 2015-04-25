@@ -1,0 +1,22 @@
+---
+title: "Post process for fortify."
+rdname: "post_fortify"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r post_fortify, cache = TRUE}
+p <- qplot(Petal.Length, Petal.Width, data = iris)
+ggfortify:::post_autoplot(p, xlim = c(1, 5), ylim = c(1, 5), log = 'xy', main = 'title',
+                          xlab = 'x', ylab = 'y', asp = 1.5)
+
+
+
+```

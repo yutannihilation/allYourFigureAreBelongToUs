@@ -1,0 +1,22 @@
+---
+title: "Factory function to control list("ggplot2::geom_xxx") functions"
+rdname: "geom_factory"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r geom_factory, cache = TRUE}
+data(Canada, package = 'vars')
+d.var <- vars::VAR(Canada, p = 3, type = 'const')
+fortify(stats::predict(d.var, n.ahead = 50))
+
+
+
+```

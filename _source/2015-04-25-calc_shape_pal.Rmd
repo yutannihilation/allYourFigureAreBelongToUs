@@ -1,0 +1,20 @@
+---
+title: "Calc shape palette (discrete)"
+rdname: "calc_shape_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r calc_shape_pal, cache = TRUE}
+show_shapes(calc_shape_pal()(15))
+
+
+
+```

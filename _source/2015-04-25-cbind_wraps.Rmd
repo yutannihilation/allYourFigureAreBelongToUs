@@ -1,0 +1,20 @@
+---
+title: "Wrapper for cbind"
+rdname: "cbind_wraps"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r cbind_wraps, cache = TRUE}
+ggfortify:::cbind_wraps(iris[1:2], iris[3:5])
+
+
+
+```

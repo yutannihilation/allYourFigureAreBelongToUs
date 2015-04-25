@@ -1,0 +1,21 @@
+---
+title: "Calc color palette (discrete)"
+rdname: "calc_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r calc_pal, cache = TRUE}
+library(scales)
+show_col(calc_pal()(12))
+
+
+
+```

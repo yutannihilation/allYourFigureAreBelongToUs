@@ -1,0 +1,23 @@
+---
+title: "Color scales from Few's "Practical Rules for Using Color in Charts""
+rdname: "scale_few"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r scale_few, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+(qplot(carat, price, data=dsamp, colour=clarity)
+ + theme_igray()
+ + scale_colour_excel("new"))
+
+
+
+```

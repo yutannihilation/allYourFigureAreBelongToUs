@@ -1,0 +1,23 @@
+---
+title: "Excel color palette (discrete)"
+rdname: "excel_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r excel_pal, cache = TRUE}
+library(scales)
+show_col(excel_pal()(8))
+show_col(excel_pal("fill")(8))
+show_col(excel_pal("new")(10))
+
+
+
+```

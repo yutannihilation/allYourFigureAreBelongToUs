@@ -1,0 +1,24 @@
+---
+title: "Stata shape palette (discrete)"
+rdname: "stata_shape_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r stata_shape_pal, cache = TRUE}
+library(scales)
+show_col(stata_pal("s2color")(15))
+show_col(stata_pal("s1rcolor")(15))
+show_col(stata_pal("s1color")(15))
+show_col(stata_pal("mono")(15))
+
+
+
+```

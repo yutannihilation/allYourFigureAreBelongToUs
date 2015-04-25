@@ -1,0 +1,22 @@
+---
+title: "Pretty axis breaks inclusive of extreme values"
+rdname: "range_breaks"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r range_breaks, cache = TRUE}
+## Not run: 
+##D palette_pander(TRUE)
+## End(Not run)
+
+
+
+```

@@ -1,0 +1,28 @@
+---
+title: "Wall Street Journal theme"
+rdname: "theme_wsj"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r theme_wsj, cache = TRUE}
+(qplot(hp, mpg, data=mtcars, geom="point")
++ scale_colour_wsj("colors6", "")
++ ggtitle("Diamond Prices")
++ theme_wsj())
+## Use a gray background instead
+(qplot(hp, mpg, data=mtcars, geom="point")
+ + scale_colour_wsj("colors6", "")
+ + ggtitle("Diamond Prices")
+ + theme_wsj(color="gray"))
+
+
+
+```

@@ -1,0 +1,24 @@
+---
+title: "Foundation Theme"
+rdname: "theme_foundation"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r theme_foundation, cache = TRUE}
+(qplot(hp, mpg, data= subset(mtcars, cyl != 5), geom="point", color = factor(cyl))
+ + ggtitle("Horsepower, mpg and cylinders")
+ + geom_smooth(method = "lm", se = FALSE)
+ + scale_color_fivethirtyeight()
+ + theme_fivethirtyeight())
+
+
+
+```

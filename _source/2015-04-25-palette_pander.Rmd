@@ -1,0 +1,22 @@
+---
+title: "Color palette from the pander package"
+rdname: "palette_pander"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r palette_pander, cache = TRUE}
+## Not run: 
+##D palette_pander(TRUE)
+## End(Not run)
+
+
+
+```

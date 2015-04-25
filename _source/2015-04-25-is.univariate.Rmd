@@ -1,0 +1,20 @@
+---
+title: "Check if Validates number of list("ts") variates"
+rdname: "is.univariate"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r is.univariate, cache = TRUE}
+ggfortify:::is.univariate(AirPassengers)
+
+
+
+```

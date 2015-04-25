@@ -1,0 +1,20 @@
+---
+title: "Calcurate residuals for list("stats::ar")"
+rdname: "residuals.ar"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r residuals.ar, cache = TRUE}
+residuals(ar(WWWusage))
+
+
+
+```

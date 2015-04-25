@@ -1,0 +1,24 @@
+---
+title: "Convert time-series-like to data.frame"
+rdname: "fortify.ts"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r fortify.ts, cache = TRUE}
+fortify(AirPassengers)
+fortify(timeSeries::as.timeSeries(AirPassengers))
+fortify(tseries::irts(cumsum(rexp(10, rate = 0.1)), matrix(rnorm(20), ncol=2)))
+fortify(stats::stl(UKgas, s.window = 'periodic'))
+fortify(stats::decompose(UKgas))
+
+
+
+```

@@ -1,0 +1,22 @@
+---
+title: "Attach label to list("ggplot2::ggplot")"
+rdname: "plot_label"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r plot_label, cache = TRUE}
+d <- fortify(stats::acf(AirPassengers, plot = FALSE))
+p <- ggplot(data = d, mapping = aes(x = Lag))
+ggfortify:::plot_confint(p, data = d)
+
+
+
+```

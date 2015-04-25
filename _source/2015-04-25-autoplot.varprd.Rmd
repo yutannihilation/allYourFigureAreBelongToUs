@@ -1,0 +1,23 @@
+---
+title: "Autoplot list("vars::varprd")"
+rdname: "autoplot.varprd"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r autoplot.varprd, cache = TRUE}
+data(Canada, package = 'vars')
+d.var <- vars::VAR(Canada, p = 3, type = 'const')
+autoplot(stats::predict(d.var, n.ahead = 50), is.date = TRUE)
+autoplot(stats::predict(d.var, n.ahead = 50), conf.int = FALSE)
+
+
+
+```

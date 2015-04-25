@@ -1,0 +1,21 @@
+---
+title: "Backtransform list("scale")-ed object"
+rdname: "unscale"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r unscale, cache = TRUE}
+df <- iris[-5]
+ggfortify::unscale(base::scale(df))
+
+
+
+```

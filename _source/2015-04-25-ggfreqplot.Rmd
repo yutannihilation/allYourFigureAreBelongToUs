@@ -1,0 +1,23 @@
+---
+title: "Plot seasonal subseries of time series, generalization of list("stats::monthplot")"
+rdname: "ggfreqplot"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r ggfreqplot, cache = TRUE}
+
+ggfreqplot(AirPassengers)
+ggfreqplot(AirPassengers, freq = 4)
+ggfreqplot(AirPassengers, conf.int = TRUE)
+
+
+
+```

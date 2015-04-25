@@ -1,0 +1,20 @@
+---
+title: "Calcurate fitted values for list("stats::ar")"
+rdname: "fitted.ar"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r fitted.ar, cache = TRUE}
+fitted(ar(WWWusage))
+
+
+
+```

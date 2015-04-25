@@ -1,0 +1,26 @@
+---
+title: "Highcharts JS color palette (discrete)"
+rdname: "hc_pal"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r hc_pal, cache = TRUE}
+p <- ggplot(mtcars, aes(factor(cyl), mpg))
+## with only a point
+p + geom_tufteboxplot()
+## with a middle box
+p + geom_tufteboxplot(median.type="box", fatten=1)
+## using lines
+p + geom_tufteboxplot(median.type="line")
+
+
+
+```

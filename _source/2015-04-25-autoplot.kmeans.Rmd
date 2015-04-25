@@ -1,0 +1,25 @@
+---
+title: "Autoplot cluster instances"
+rdname: "autoplot.kmeans"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggfortify"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggfortify)
+```
+
+```{r autoplot.kmeans, cache = TRUE}
+autoplot(stats::kmeans(iris[-5], 3), data = iris)
+autoplot(cluster::clara(iris[-5], 3), label = TRUE)
+autoplot(cluster::fanny(iris[-5], 3))
+autoplot(cluster::fanny(iris[-5], 3), frame = TRUE)
+autoplot(cluster::pam(iris[-5], 3), data = iris, colour = 'Species')
+autoplot(cluster::pam(iris[-5], 3), data = iris, frame = TRUE, frame.type = 't')
+
+
+
+```

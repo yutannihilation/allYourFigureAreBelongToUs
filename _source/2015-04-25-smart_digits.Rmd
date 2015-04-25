@@ -1,0 +1,22 @@
+---
+title: "Format numbers with automatic number of digits"
+rdname: "smart_digits"
+date: "2015-04-25"
+output: html_document
+layout: article
+category: "ggthemes"
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggthemes)
+```
+
+```{r smart_digits, cache = TRUE}
+library(scales)
+show_shapes(shape_pal()(5))
+show_shapes(shape_pal()(3), labels=TRUE)
+
+
+
+```
