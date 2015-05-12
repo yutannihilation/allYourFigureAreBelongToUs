@@ -1,22 +1,18 @@
 ---
 layout: archive
-permalink: /
-title: "Latest Posts"
+permalink: /xkcd/
+title: "package:xkcd"
+showAllPosts: true
 ---
 
-{% for cat in site.categories %}
 <div class="wrap">
-   <div class="page-title">
-     <a href="{{ site.baseurl }}/{{ cat[0] }}/"><h1>{{ cat[0] }}</h1>
-   </div>
    <div class="archive-wrap">
       <div class="page-content">
          <div class="tiles">
-         {% for post in cat[1] %}
+         {% for post in site.categories.xkcd %}
             {% include post-grid.html %}
          {% endfor %}
          </div><!-- /.tiles -->
       </div><!-- /.page-content -->
    </div><!-- /.archive-wrap -->
 </div><!-- /.wrap -->
-{% endfor %}

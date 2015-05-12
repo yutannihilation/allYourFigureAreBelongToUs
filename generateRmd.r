@@ -8,7 +8,8 @@ date: %s
 output: html_document
 layout: article
 category: %s
-images:FRONTFOMATTER_IMAGES
+images:
+FRONTFOMATTER_IMAGES
 ---
 
 ```{r, echo = FALSE, message = FALSE}

@@ -23,7 +23,7 @@ local({
   
   figures <- list.files(knitr::opts_chunk$get("fig.path"), full.names = TRUE)
   if(length(figures) > 0){
-    images <- paste0("\n - ", figures, collapse = "")
+    images <- paste0(sprintf(" - %s/%s", baseurl, figures), collapse = "\n")
   } else {
     images <- ' ""'
   }

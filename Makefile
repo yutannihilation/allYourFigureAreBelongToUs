@@ -3,7 +3,8 @@
 
 OPTION_SERVE :=  --port 1410 --host 0.0.0.0
 
-CMD_GENERATE := ./generateRmd.r
+CMD_GEN_RMD := ./generateRmd.r
+CMD_GEN_CAT := ./generateCategory.r
 CMD_KNIT     := ./knit.r
 CMD_BUILD    := bundle exec jekyll build
 CMD_SERVE    := bundle exec jekyll serve ${OPTION_SERVE}
@@ -14,7 +15,7 @@ MD = $(patsubst _source/%.Rmd,_posts/%.md,$(wildcard _source/*.Rmd))
 all: generate knit
 
 generate: 
-	while read pkg; do ${CMD_GENERATE} $${pkg}; done < packages.txt
+	while read pkg; do ${CMD_GEN_RMD} $${pkg}; ${CMD_GEN_CAT} $${pkg}; done < packages.txt
 
 knit: $(MD) 
 
