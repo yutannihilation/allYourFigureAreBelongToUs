@@ -38,6 +38,9 @@ f <- tempfile()
 for(Rdname in names(RdDB)) {
   Rd <- RdDB[[Rdname]]
 
+  # skip if there is no Examples section
+  if(!any(tools:::RdTags(Rd) == "\\examples")) next
+
   title <- paste0(as.character(Rd[[which(tools:::RdTags(Rd) == "\\title")]]), collapse = "")
   title <- gsub('\n', '\n  ', title)
   title <- gsub('list\\("(\\w+)"\\)', '\\1', title)
@@ -53,7 +56,7 @@ for(Rdname in names(RdDB)) {
   
   # codes
   tools::Rd2ex(Rd, f)
-  
+
   # dischard first six lines
   ex <- readLines(f)
   cat(paste0(ex[7:length(ex)], collapse = "\n"), file = out, append = TRUE)
