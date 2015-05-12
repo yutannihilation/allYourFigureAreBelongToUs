@@ -1,7 +1,6 @@
 xkcd
 ggparallel
 ggExtra
-ggmap
 ggdendro
 ggthemr
 ggthemes
