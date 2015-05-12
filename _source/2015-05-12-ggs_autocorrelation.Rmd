@@ -1,0 +1,24 @@
+---
+title: |
+  Plot an autocorrelation matrix
+rdname: ggs_autocorrelation
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_autocorrelation, cache = TRUE}
+data(linear)
+ggs_autocorrelation(ggs(s))
+
+
+
+```

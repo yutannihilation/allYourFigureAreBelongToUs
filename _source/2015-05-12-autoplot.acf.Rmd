@@ -1,0 +1,27 @@
+---
+title: |
+  Autoplot list("stats::acf"). Note to pass `plot = FALSE` to original function to suppress
+  standard plot output
+rdname: autoplot.acf
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggfortify
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+```
+
+```{r autoplot.acf, cache = TRUE}
+
+autoplot(stats::acf(AirPassengers, plot = FALSE))
+autoplot(stats::pacf(AirPassengers, plot = FALSE))
+autoplot(stats::ccf(AirPassengers, AirPassengers, plot = FALSE))
+
+
+
+```

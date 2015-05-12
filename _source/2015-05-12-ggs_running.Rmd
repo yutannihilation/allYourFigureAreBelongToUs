@@ -1,0 +1,24 @@
+---
+title: |
+  Running means of the chains
+rdname: ggs_running
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_running, cache = TRUE}
+data(linear)
+ggs_running(ggs(s))
+
+
+
+```

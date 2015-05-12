@@ -1,0 +1,25 @@
+---
+title: |
+  Stata shape scale
+rdname: scale_shape_stata
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r scale_shape_stata, cache = TRUE}
+dsmall <- diamonds[sample(nrow(diamonds), 100), ]
+(d <- qplot(carat, price, data=dsmall, shape=cut)
+ + scale_shape_stata())
+
+
+
+```

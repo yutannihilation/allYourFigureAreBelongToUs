@@ -1,0 +1,27 @@
+---
+title: |
+  Autoplot list("strucchange::breakpoints")
+rdname: autoplot.breakpoints
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggfortify
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+```
+
+```{r autoplot.breakpoints, cache = TRUE}
+library(strucchange)
+bp.nile <- breakpoints(Nile ~ 1)
+autoplot(bp.nile)
+autoplot(bp.nile, is.date = TRUE)
+autoplot(breakpoints(bp.nile, breaks = 2), data = Nile)
+
+
+
+```

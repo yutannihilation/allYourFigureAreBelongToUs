@@ -1,0 +1,25 @@
+---
+title: |
+  Convert list("stats::spec") to list("data.frame")
+rdname: fortify.spec
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggfortify
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+```
+
+```{r fortify.spec, cache = TRUE}
+fortify(spectrum(AirPassengers))
+fortify(stats::spec.ar(AirPassengers))
+fortify(stats::spec.pgram(AirPassengers))
+
+
+
+```

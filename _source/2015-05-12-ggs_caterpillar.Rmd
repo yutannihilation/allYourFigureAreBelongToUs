@@ -1,0 +1,25 @@
+---
+title: |
+  Caterpillar plot with thick and thin CI
+rdname: ggs_caterpillar
+date: 2015-05-12
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_caterpillar, cache = TRUE}
+data(linear)
+ggs_caterpillar(ggs(s))
+ggs_caterpillar(list(A=ggs(s), B=ggs(s))) # silly example duplicating the same model
+
+
+
+```
