@@ -7,4 +7,4 @@ post_layout: article
 page_layout: article
 
 # Format titles with titlecase?
-titlecase: true
+titlecase: false
