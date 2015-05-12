@@ -1,11 +1,16 @@
-{% if post.images != "" %}
+{% if post.images != "" or page.showAllPosts %}
 <article class="tile" itemscope itemtype="http://schema.org/Article">
   <div class="carousel {{ post.rdname }}">
   {% for image in post.images %}
   <div>
-  <img src="{{ image }}" alt="teaser" itemprop="image">
+    <img src="{{ image }}" alt="teaser" itemprop="image">
   </div>
   {% endfor %}
+  {% if post.images == "" %}
+  <div>
+    <img src="{{ site.baseurl }}/images/noimage.png" alt="teaser" itemprop="image">
+  </div>
+  {% endif %}
   </div>
   <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.rdname }}</a></h2>
   <p class="post-excerpt" itemprop="description">{{ post.title | strip_html | truncate: 160 }}</p>
