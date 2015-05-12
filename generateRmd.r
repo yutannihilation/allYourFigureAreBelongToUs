@@ -33,6 +33,8 @@ pkgname <- argv[1]
 library(pkgname, character.only = TRUE, quietly = TRUE)
 RdDB <- tools::Rd_db(pkgname)
 
+exported_objnames <- ls(sprintf('package:%s', pkgname))
+
 f <- tempfile()
 
 for(Rdname in names(RdDB)) {
@@ -40,6 +42,10 @@ for(Rdname in names(RdDB)) {
 
   # skip if there is no Examples section
   if(!any(tools:::RdTags(Rd) == "\\examples")) next
+  
+  # skip if the Rd is not related to exported objects
+  aliases <- unlist(Rd[which(tools:::RdTags(Rd) %in% c("\\name", "\\alias") )])
+  if(!any(aliases %in% exported_objnames)) next
 
   title <- paste0(as.character(Rd[[which(tools:::RdTags(Rd) == "\\title")]]), collapse = "")
   title <- gsub('\n', '\n  ', title)
