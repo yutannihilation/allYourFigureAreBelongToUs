@@ -1,0 +1,26 @@
+---
+title: |
+  Plot Types
+rdname: plot_types
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r plot_types, cache = TRUE}
+
+data(flea)
+head(lowertriangle(flea, columns= 2:4))
+head(lowertriangle(flea))
+head(lowertriangle(flea, color="species"))
+
+
+
+```

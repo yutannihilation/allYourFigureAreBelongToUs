@@ -1,5 +1,6 @@
 ---
-title: Draw lines or circunferences
+title: |
+  Draw lines or circunferences
 rdname: xkcdline
 date: 2015-05-12
 output: html_document

@@ -1,0 +1,49 @@
+---
+title: |
+  Old plotting method
+rdname: print_ggpairs_old
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:
+ - figure/source/2015-05-12-print_ggpairs_old//print_ggpairs_old-1.png
+---
+
+
+
+
+{% highlight r %}
+data(tips, package = "reshape")
+ pMat <- ggpairs(tips, c(1,3,2), color = "sex")
+ pMat # calls print(pMat), which calls print.ggpairs(pMat)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning: The plyr::rename operation has created duplicates for the
+## following name(s): (`colour`)
+{% endhighlight %}
+
+![plot of chunk print_ggpairs_old](/allYourFigureAreBelongToUs/figure/source/2015-05-12-print_ggpairs_old/print_ggpairs_old-1.png) 
+
+{% highlight r %}
+ ## defaults; (prints strips on top and right edges of matrix)
+ # print(pMat, left = 0.2, spacing = 0.03, bottom = 0.1, showStrips = NULL)
+
+ ## show none of the strips
+ # print(pMat, showStrips = FALSE)
+
+ ## show all of the strips
+ # print(pMat, showStrips = TRUE)
+
+ ## give the left axis labels area a proportion of 3 plot size
+ # print(pMat, leftWidthProportion = 3)
+
+ ## give the bottom axis labels area a proportion of 1 plot size
+ # print(pMat, bottomHeightProportion = 1)
+
+ ## give the spacing between plots a proportion of 1 plot size
+ # print(pMat, spacing = 1)
+{% endhighlight %}

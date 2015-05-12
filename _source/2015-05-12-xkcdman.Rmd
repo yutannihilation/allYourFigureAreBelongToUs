@@ -1,5 +1,6 @@
 ---
-title: Draw a stick figure
+title: |
+  Draw a stick figure
 rdname: xkcdman
 date: 2015-05-12
 output: html_document

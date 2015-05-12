@@ -1,0 +1,25 @@
+---
+title: |
+  Is Blank Plot?
+  Find out if the plot equals a blank plot
+rdname: is_blank_plot
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r is_blank_plot, cache = TRUE}
+
+GGally:::is_blank_plot(ggally_blank())
+ GGally:::is_blank_plot(ggally_points(mtcars, ggplot2::aes_string(x = "disp", y = "hp")))
+
+
+
+```

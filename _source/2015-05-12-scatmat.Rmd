@@ -1,0 +1,25 @@
+---
+title: |
+  scatmat - plot the lowertriangle plots and density plots of the scatter plot matrix.
+rdname: scatmat
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r scatmat, cache = TRUE}
+
+data(flea)
+scatmat(flea, columns=2:4)
+scatmat(flea, columns= 2:4, color="species")
+
+
+
+```

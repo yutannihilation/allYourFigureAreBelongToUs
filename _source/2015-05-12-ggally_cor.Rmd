@@ -1,0 +1,33 @@
+---
+title: |
+  Correlation from the Scatter Plot
+rdname: ggally_cor
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggally_cor, cache = TRUE}
+
+data(tips, package = "reshape")
+ ggally_cor(tips, mapping = ggplot2::aes_string(x = "total_bill", y = "tip"))
+ ggally_cor(
+   tips,
+   mapping = ggplot2::aes_string(x = "total_bill", y = "tip", size = 15, colour = "red")
+ )
+ ggally_cor(
+   tips,
+   mapping = ggplot2::aes_string(x = "total_bill", y = "tip", color = "sex"),
+   size = 5
+ )
+
+
+
+```

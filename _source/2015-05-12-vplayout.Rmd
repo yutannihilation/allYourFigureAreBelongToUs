@@ -1,0 +1,26 @@
+---
+title: |
+  Viewport Layout Wrapper
+rdname: vplayout
+date: 2015-05-12
+output: html_document
+layout: article
+category: GGally
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r vplayout, cache = TRUE}
+
+data(flea)
+head(uppertriangle(flea, columns=2:4))
+head(uppertriangle(flea))
+head(uppertriangle(flea, color="species"))
+
+
+
+```

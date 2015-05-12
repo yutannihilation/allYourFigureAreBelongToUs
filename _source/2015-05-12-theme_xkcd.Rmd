@@ -1,5 +1,6 @@
 ---
-title: Creates an XKCD theme
+title: |
+  Creates an XKCD theme
 rdname: theme_xkcd
 date: 2015-05-12
 output: html_document
