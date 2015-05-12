@@ -29,8 +29,8 @@ $(MD): _posts/%.md: _source/%.Rmd
 
 push:
 	${CMD_GIT} add --all _source/ _posts/ figure/source/*
-        ${CMD_GIT} commit -m "update posts by make push"
-        ${CMD_GIT} push origin gh-pages
+	${CMD_GIT} commit -m "update posts by make push"
+	${CMD_GIT} push origin gh-pages
 
 clean:
 	rm -f _source/* _posts/*; rm -rf figure/source/*

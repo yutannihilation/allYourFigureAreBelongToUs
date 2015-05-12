@@ -1,7 +1,8 @@
 #!/usr/bin/env r
 
 header_tmpl <- '---
-title: %s
+title: |
+  %s
 rdname: %s
 date: %s
 output: html_document
@@ -35,8 +36,13 @@ f <- tempfile()
 
 for(Rdname in names(RdDB)) {
   Rd <- RdDB[[Rdname]]
+
   title <- paste0(as.character(Rd[[which(tools:::RdTags(Rd) == "\\title")]]), collapse = "")
+  title <- gsub('\n', '\n  ', title)
+  title <- gsub('list\\("(\\w+)"\\)', '\\1', title)
+
   rdname <- sub("\\.Rd$", "", Rdname)
+
   date  <- strftime(Sys.time(), "%Y-%m-%d")
   
   out <- file.path("_source", sprintf("%s-%s.Rmd", date, rdname))
