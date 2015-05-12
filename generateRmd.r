@@ -1,16 +1,17 @@
 #!/usr/bin/env r
 
 header_tmpl <- '---
-title: "%s"
-rdname: "%s"
-date: "%s"
+title: %s
+rdname: %s
+date: %s
 output: html_document
 layout: article
-category: "%s"
+category: %s
 images:FRONTFOMATTER_IMAGES
 ---
 
 ```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
 library(%s)
 ```
 
@@ -21,13 +22,13 @@ footer <- '
 ```'
 
 if (is.null(argv) | length(argv) != 1) {
-  cat("Usage: createRmd.r pkg1\n")
+  cat("Usage: generateRmd.r pkg1\n")
   q()
 }
 
 pkgname <- argv[1]
 
-library(pkgname, character.only = TRUE)
+library(pkgname, character.only = TRUE, quietly = TRUE)
 RdDB <- tools::Rd_db(pkgname)
 
 f <- tempfile()

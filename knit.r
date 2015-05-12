@@ -1,3 +1,5 @@
+#! /usr/local/bin/r
+
 local({
   # fall back on '/' if baseurl is not specified
   baseurl = servr:::jekyll_config('.', 'baseurl', '/')
@@ -11,13 +13,13 @@ local({
   
   # input/output filenames are passed as two additional arguments to Rscript
   a = commandArgs(TRUE)
-  d = gsub('^_|[.][a-zA-Z]+$', '', a[1])
+  d = gsub('^_|[.][a-zA-Z]+$', '', argv[1])
   knitr::opts_chunk$set(
     fig.path   = sprintf('figure/%s/', d),
     cache.path = sprintf('cache/%s/', d)
   )
   knitr::opts_knit$set(width = 70)
-  knitr::knit(a[1], a[2], quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
+  knitr::knit(argv[1], argv[2], quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
   
   figures <- list.files(knitr::opts_chunk$get("fig.path"), full.names = TRUE)
   if(length(figures) > 0){
@@ -28,6 +30,6 @@ local({
   
   txt <- sub("FRONTFOMATTER_IMAGES", 
       images, 
-      paste(readLines(a[2]), collapse = "\n"))
-  cat(txt, file = a[2])
+      paste(readLines(argv[2]), collapse = "\n"))
+  cat(txt, file = argv[2])
 })
