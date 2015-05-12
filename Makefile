@@ -12,7 +12,7 @@ CMD_GIT      := git
 
 MD = $(patsubst _source/%.Rmd,_posts/%.md,$(wildcard _source/*.Rmd))
 
-all: generate knit
+all: knit build
 
 generate: 
 	while read pkg; do ${CMD_GEN_RMD} $${pkg}; ${CMD_GEN_CAT} $${pkg}; done < packages.txt
@@ -29,9 +29,9 @@ $(MD): _posts/%.md: _source/%.Rmd
 	${CMD_KNIT} $^ $@
 
 push:
-	${CMD_GIT} add --all _source/ _posts/ figure/source/*
+	${CMD_GIT} add --all _source/ _posts/ figure/source/ category/
 	${CMD_GIT} commit -m "update posts by make push"
 	${CMD_GIT} push origin gh-pages
 
 clean:
-	rm -f _source/* _posts/*; rm -rf figure/source/*
+	rm -f _source/* _posts/*; rm -rf figure/source/* cache/*

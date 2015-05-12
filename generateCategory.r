@@ -8,6 +8,23 @@ showAllPosts: true
 ---
 
 <div class="wrap">
+
+   <nav class="breadcrumbs">
+      <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+         <a href="{{ site.baseurl }}" itemprop="url">
+            <span itemprop="title">Home</span>
+         </a>
+          ›
+         <a href="{{ site.baseurl }}/%s" itemprop="url">
+            <span itemprop="title">%s</span>
+         </a>
+      </span>
+   </nav>
+
+   <div class="page-title">
+     <h1>%s</h1>
+   </div>
+
    <div class="archive-wrap">
       <div class="page-content">
          <div class="tiles">
@@ -27,4 +44,6 @@ if (is.null(argv) | length(argv) != 1) {
 
 pkgname <- argv[1]
 out <- file.path("category", sprintf("%s.md", pkgname))
-cat(sprintf(tmpl, pkgname, pkgname, pkgname), file = out)
+
+# Note that categories are downcase
+cat(sprintf(tmpl, tolower(pkgname), pkgname, pkgname, pkgname, pkgname, tolower(pkgname)), file = out)

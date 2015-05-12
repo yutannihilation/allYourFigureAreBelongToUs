@@ -48,8 +48,8 @@ for(Rdname in names(RdDB)) {
   
   out <- file.path("_source", sprintf("%s-%s.Rmd", date, rdname))
   
-  # header
-  cat(sprintf(header_tmpl, title, rdname, date, pkgname, pkgname, rdname), file = out)
+  # header (Note that categories are normalized to dwoncase by Jekyll anyway)
+  cat(sprintf(header_tmpl, title, rdname, date, tolower(pkgname), pkgname, rdname), file = out)
   
   # codes
   tools::Rd2ex(Rd, f)
