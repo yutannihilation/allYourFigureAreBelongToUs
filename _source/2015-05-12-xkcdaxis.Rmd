@@ -1,0 +1,26 @@
+---
+title: Plot the axis
+rdname: xkcdaxis
+date: 2015-05-12
+output: html_document
+layout: article
+category: xkcd
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(xkcd)
+```
+
+```{r xkcdaxis, cache = TRUE}
+xrange <- range(mtcars$mpg)
+yrange <- range(mtcars$wt)
+p <- ggplot() +
+     geom_point(aes(mpg, wt), data=mtcars) +
+     xkcdaxis(xrange,yrange)
+p
+
+
+
+```

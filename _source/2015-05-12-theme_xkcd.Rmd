@@ -1,0 +1,23 @@
+---
+title: Creates an XKCD theme
+rdname: theme_xkcd
+date: 2015-05-12
+output: html_document
+layout: article
+category: xkcd
+images:FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(xkcd)
+```
+
+```{r theme_xkcd, cache = TRUE}
+p <- ggplot() + geom_point(aes(mpg, wt), data=mtcars) +
+     theme_xkcd()
+p
+
+
+
+```
