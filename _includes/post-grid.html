@@ -1,7 +1,5 @@
 {% if post.images != "" %}
 <article class="tile" itemscope itemtype="http://schema.org/Article">
-  <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.rdname }}</a></h2>
-  <p class="post-excerpt" itemprop="description">{{ post.title | strip_html | truncate: 160 }}</p>
   <div class="carousel {{ post.rdname }}">
   {% for image in post.images %}
   <div>
@@ -9,6 +7,7 @@
   </div>
   {% endfor %}
   </div>
-  {% if post.date %}<p class="entry-date date published"><time datetime="{{ post.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>{% endif %}
+  <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.rdname }}</a></h2>
+  <p class="post-excerpt" itemprop="description">{{ post.title | strip_html | truncate: 160 }}</p>
 </article><!-- /.tile -->
 {% endif %}
