@@ -5,7 +5,7 @@ rdname: get_plot_type
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-get_plot_type//get_plot_type-1.png
 ---

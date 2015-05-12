@@ -5,7 +5,7 @@ rdname: ggally_smooth
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_smooth//ggally_smooth-1.png
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_smooth//ggally_smooth-2.png

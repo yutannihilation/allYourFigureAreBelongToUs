@@ -5,7 +5,7 @@ rdname: eval_ggpair
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-eval_ggpair//eval_ggpair-1.png
 ---

@@ -5,7 +5,7 @@ rdname: ggally_facetdensitystrip
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-1.png
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-2.png

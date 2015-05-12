@@ -5,7 +5,7 @@ rdname: ggally_densityDiag
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_densityDiag//ggally_densityDiag-1.png
 ---

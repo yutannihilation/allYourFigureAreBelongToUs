@@ -5,7 +5,7 @@ rdname: ggscatmat
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggscatmat//ggscatmat-1.png
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggscatmat//ggscatmat-2.png

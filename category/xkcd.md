@@ -6,6 +6,23 @@ showAllPosts: true
 ---
 
 <div class="wrap">
+
+   <nav class="breadcrumbs">
+      <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+         <a href="{{ site.baseurl }}" itemprop="url">
+            <span itemprop="title">Home</span>
+         </a>
+          ›
+         <a href="{{ site.baseurl }}/xkcd" itemprop="url">
+            <span itemprop="title">xkcd</span>
+         </a>
+      </span>
+   </nav>
+
+   <div class="page-title">
+     <h1>xkcd</h1>
+   </div>
+
    <div class="archive-wrap">
       <div class="page-content">
          <div class="tiles">

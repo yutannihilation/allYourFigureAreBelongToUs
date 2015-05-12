@@ -5,7 +5,7 @@ rdname: ggally_ratio
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_ratio//ggally_ratio-1.png
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_ratio//ggally_ratio-2.png

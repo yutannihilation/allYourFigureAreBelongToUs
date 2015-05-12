@@ -5,7 +5,7 @@ rdname: add_ref_boxes
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-add_ref_boxes//add_ref_boxes-1.png
 ---

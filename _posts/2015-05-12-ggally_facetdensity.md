@@ -5,7 +5,7 @@ rdname: ggally_facetdensity
 date: 2015-05-12
 output: html_document
 layout: article
-category: GGally
+category: ggally
 images:
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-1.png
  - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-2.png
