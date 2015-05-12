@@ -7,8 +7,8 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-1.png
- - figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensity//ggally_facetdensity-2.png
 ---
 
 

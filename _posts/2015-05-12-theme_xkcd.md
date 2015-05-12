@@ -7,7 +7,7 @@ output: html_document
 layout: article
 category: xkcd
 images:
- - figure/source/2015-05-12-theme_xkcd//theme_xkcd-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-theme_xkcd//theme_xkcd-1.png
 ---
 
 

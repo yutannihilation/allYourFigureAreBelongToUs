@@ -7,10 +7,10 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_density//ggally_density-1.png
- - figure/source/2015-05-12-ggally_density//ggally_density-2.png
- - figure/source/2015-05-12-ggally_density//ggally_density-3.png
- - figure/source/2015-05-12-ggally_density//ggally_density-4.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_density//ggally_density-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_density//ggally_density-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_density//ggally_density-3.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_density//ggally_density-4.png
 ---
 
 

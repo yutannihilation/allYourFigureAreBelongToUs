@@ -7,9 +7,9 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_ratio//ggally_ratio-1.png
- - figure/source/2015-05-12-ggally_ratio//ggally_ratio-2.png
- - figure/source/2015-05-12-ggally_ratio//ggally_ratio-3.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_ratio//ggally_ratio-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_ratio//ggally_ratio-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_ratio//ggally_ratio-3.png
 ---
 
 

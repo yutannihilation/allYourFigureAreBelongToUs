@@ -7,7 +7,7 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-add_ref_lines//add_ref_lines-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-add_ref_lines//add_ref_lines-1.png
 ---
 
 

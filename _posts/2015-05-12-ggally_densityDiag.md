@@ -7,7 +7,7 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_densityDiag//ggally_densityDiag-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_densityDiag//ggally_densityDiag-1.png
 ---
 
 

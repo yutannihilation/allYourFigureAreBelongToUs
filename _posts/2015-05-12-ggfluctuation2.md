@@ -7,10 +7,10 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-1.png
- - figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-2.png
- - figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-3.png
- - figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-4.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-3.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggfluctuation2//ggfluctuation2-4.png
 ---
 
 

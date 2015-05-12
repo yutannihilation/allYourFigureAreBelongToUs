@@ -7,8 +7,8 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_facetbar//ggally_facetbar-1.png
- - figure/source/2015-05-12-ggally_facetbar//ggally_facetbar-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetbar//ggally_facetbar-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetbar//ggally_facetbar-2.png
 ---
 
 

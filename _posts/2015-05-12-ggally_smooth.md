@@ -7,9 +7,9 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_smooth//ggally_smooth-1.png
- - figure/source/2015-05-12-ggally_smooth//ggally_smooth-2.png
- - figure/source/2015-05-12-ggally_smooth//ggally_smooth-3.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_smooth//ggally_smooth-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_smooth//ggally_smooth-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_smooth//ggally_smooth-3.png
 ---
 
 

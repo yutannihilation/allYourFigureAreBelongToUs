@@ -7,7 +7,7 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-find_plot_type//find_plot_type-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-find_plot_type//find_plot_type-1.png
 ---
 
 

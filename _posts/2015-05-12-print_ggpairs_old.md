@@ -7,7 +7,7 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-print_ggpairs_old//print_ggpairs_old-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-print_ggpairs_old//print_ggpairs_old-1.png
 ---
 
 

@@ -7,11 +7,11 @@ output: html_document
 layout: article
 category: GGally
 images:
- - figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-1.png
- - figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-2.png
- - figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-3.png
- - figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-4.png
- - figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-5.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-1.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-2.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-3.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-4.png
+ - /allYourFigureAreBelongToUs/figure/source/2015-05-12-ggally_facetdensitystrip//ggally_facetdensitystrip-5.png
 ---
 
 
