@@ -15,7 +15,12 @@ MD = $(patsubst _source/%.Rmd,_posts/%.md,$(wildcard _source/*.Rmd))
 all: knit build
 
 generate: 
-	while read pkg; do ${CMD_GEN_RMD} $${pkg}; ${CMD_GEN_CAT} $${pkg}; done < packages.txt
+	while read pkg; do \
+	  echo generating Rmds of $${pkg}...; \
+	  ${CMD_GEN_RMD} $${pkg}; \
+	  echo generating the category page of $${pkg}...; \
+	  ${CMD_GEN_CAT} $${pkg}; \
+	done < packages.txt
 
 knit: $(MD) 
 
