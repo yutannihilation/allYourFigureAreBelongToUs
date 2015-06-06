@@ -1,0 +1,34 @@
+---
+title: |
+  Tableau color scales.
+rdname: scale_color_tableau
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r scale_color_tableau, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+p <- qplot(carat, price, data=dsamp, colour=clarity) + theme_igray()
+p + scale_colour_tableau()
+p + scale_colour_tableau("tableau20")
+p + scale_colour_tableau("tableau10medium")
+p + scale_colour_tableau("tableau10light")
+p + scale_colour_tableau("colorblind10")
+p + scale_colour_tableau("trafficlight")
+p + scale_colour_tableau("purplegray12")
+p + scale_colour_tableau("bluered12")
+p + scale_colour_tableau("greenorange12")
+p + scale_colour_tableau("cyclic")
+
+
+
+```

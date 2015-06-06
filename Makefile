@@ -1,7 +1,7 @@
 .SUFFIXES: .md .Rmd .html
 .PHONY: all generate knit build serve push clean
 
-OPTION_SERVE :=  --port 1410 --host 0.0.0.0
+OPTION_SERVE :=  --port 1410 
 
 CMD_GEN_RMD := ./generateRmd.r
 CMD_GEN_CAT := ./generateCategory.r

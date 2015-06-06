@@ -1,0 +1,49 @@
+---
+title: |
+  Themes based on Stata graph schemes
+rdname: theme_stata
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r theme_stata, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+q1 <- (qplot(carat, price, data=dsamp, colour=clarity)
+       + ggtitle("Diamonds"))
+q2 <- (qplot(carat, price, data=dsamp)
+       + facet_wrap(~ clarity)
+       + ggtitle("Diamonds"))
+q1mono <- (qplot(carat, price, shape=clarity, color=clarity,
+           data=dsamp)
+           + scale_shape_stata()
+           + ggtitle("Diamonds"))
+## s2color
+(q1 + theme_stata() + scale_colour_stata(scheme = "s2color"))
+(q2 + theme_stata())
+## s2mono
+(q1mono + theme_stata(scheme = "s2mono") + scale_colour_stata("mono"))
+(q2 + theme_stata(scheme = "s2mono"))
+## s1color
+(q1 + theme_stata(scheme = "s1color") + scale_colour_stata("s1color"))
+(q2 + theme_stata(scheme = "s1color"))
+## s1rcolor
+(q1 + theme_stata(scheme = "s1rcolor") + scale_colour_stata("s1rcolor"))
+(ggplot(dsamp, aes(x=carat, y=price)) + geom_point(colour="white")
+ + facet_wrap(~ clarity) + scale_colour_stata("s1rcolor")
+ + ggtitle("Diamonds"))
+## s1mono
+(q1mono + theme_stata(scheme = "s1mono") + scale_colour_stata("mono"))
+(q2 + theme_stata(scheme = "s1mono"))
+
+
+
+```

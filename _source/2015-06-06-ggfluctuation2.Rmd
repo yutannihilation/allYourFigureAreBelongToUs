@@ -1,0 +1,28 @@
+---
+title: |
+  Fluctuation plot
+rdname: ggfluctuation2
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggfluctuation2, cache = TRUE}
+
+data(movies, package = "ggplot2")
+ggfluctuation2(table(movies$Action, movies$Comedy))
+ggfluctuation2(table(movies$Action, movies$mpaa))
+ggfluctuation2(table(movies[,c("Action", "mpaa")]))
+ggfluctuation2(table(warpbreaks$breaks, warpbreaks$tension))
+
+
+
+```

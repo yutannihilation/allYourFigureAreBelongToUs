@@ -1,0 +1,29 @@
+---
+title: |
+  Remove grid lines from ggplot2
+rdname: removeGrid
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggextra
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggExtra)
+```
+
+```{r removeGrid, cache = TRUE}
+if (requireNamespace("ggplot2", quietly = TRUE)) {
+  df <- data.frame(x = 1:50, y = 1:50)
+  p <- ggplot2::ggplot(df, ggplot2::aes(x, y)) + ggplot2::geom_point()
+  p + removeGrid()
+  p + removeGrid(y = FALSE)
+  p + removeGridX()
+}
+
+
+
+```

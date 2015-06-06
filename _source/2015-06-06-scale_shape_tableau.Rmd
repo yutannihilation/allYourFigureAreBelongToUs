@@ -1,0 +1,25 @@
+---
+title: |
+  Tableau shape scales
+rdname: scale_shape_tableau
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r scale_shape_tableau, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+p <- qplot(carat, price, data=dsamp, shape=clarity)
+p + scale_shape_tableau()
+
+
+
+```

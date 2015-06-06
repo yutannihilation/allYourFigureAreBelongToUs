@@ -1,0 +1,25 @@
+---
+title: |
+  Show linetypes
+rdname: show_linetypes
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r show_linetypes, cache = TRUE}
+library(scales)
+show_linetypes(linetype_pal()(3))
+show_linetypes(linetype_pal()(3), labels=TRUE)
+
+
+
+```

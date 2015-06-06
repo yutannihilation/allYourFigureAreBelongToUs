@@ -1,0 +1,24 @@
+---
+title: |
+  Density plots of the chains
+rdname: ggs_density
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_density, cache = TRUE}
+data(linear)
+ggs_density(ggs(s))
+
+
+
+```

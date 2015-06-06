@@ -1,0 +1,24 @@
+---
+title: |
+  Traceplot of the chains
+rdname: ggs_traceplot
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_traceplot, cache = TRUE}
+data(linear)
+ggs_traceplot(ggs(s))
+
+
+
+```

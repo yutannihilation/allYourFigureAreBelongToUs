@@ -1,0 +1,25 @@
+---
+title: |
+  Receiver-Operator Characteristic (ROC) plot for models with binary outcomes
+rdname: ggs_rocplot
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_rocplot, cache = TRUE}
+
+data(binary)
+ggs_rocplot(ggs(s.binary, family="mu"), outcome=y.binary)
+
+
+
+```

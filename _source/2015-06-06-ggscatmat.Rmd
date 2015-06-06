@@ -1,0 +1,26 @@
+---
+title: |
+  ggscatmat - a traditional scatterplot matrix for purely quantitative variables
+rdname: ggscatmat
+date: 2015-06-06
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggscatmat, cache = TRUE}
+
+data(flea)
+ggscatmat(flea, columns = 2:4)
+ggscatmat(flea, columns = 2:4, color="species")
+
+
+
+```

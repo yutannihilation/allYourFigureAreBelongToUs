@@ -1,0 +1,35 @@
+---
+title: |
+  
+  Draws handwritten lines
+  
+rdname: xkcdline
+date: 2015-06-06
+output: html_document
+layout: article
+category: xkcd
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(xkcd)
+```
+
+```{r xkcdline, cache = TRUE}
+data <- data.frame(x1=c(1,2), y1=c(10,20), xend=c(2.5,0.5),
+yend=c(20,10), model=c("low","high"))
+
+ggplot() + xkcdline(mapping=aes(xbegin=x1 +y1, ybegin=y1, xend =xend, yend= yend,
+color = model), data=data)
+
+ggplot() + xkcdline(mapping=aes(xbegin=x1 +y1, ybegin=y1, xend =xend, yend= yend,
+color = model), data=data) + facet_grid(. ~ model)
+
+ggplot() + xkcdline(mapping=aes(x=x1 +y1, y=y1, diameter =xend), data=data, type="circunference") 
+
+
+
+
+```
