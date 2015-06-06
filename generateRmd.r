@@ -1,4 +1,13 @@
-#!/usr/bin/env r
+#! /usr/bin/env Rscript
+
+"
+Usage: generateRmd.r PACKAGE
+" -> doc
+
+opts <- docopt::docopt(doc)
+pkgname <- opts[["PACKAGE"]]
+
+#----------------------------
 
 header_tmpl <- '---
 title: |
@@ -22,13 +31,6 @@ library(%s)
 
 footer <- '
 ```'
-
-if (is.null(argv) | length(argv) != 1) {
-  cat("Usage: generateRmd.r pkg1\n")
-  q()
-}
-
-pkgname <- argv[1]
 
 library(pkgname, character.only = TRUE, quietly = TRUE)
 RdDB <- tools::Rd_db(pkgname)

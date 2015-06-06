@@ -1,4 +1,13 @@
-#!/usr/bin/env r
+#!/usr/bin/env Rscript
+
+"
+Usage: generateCategory.r PACKAGE
+" -> doc
+
+opts <- docopt::docopt(doc)
+pkgname <- opts[["PACKAGE"]]
+
+#------------------------------
 
 tmpl <- '---
 layout: archive
@@ -37,12 +46,6 @@ showAllPosts: true
 </div><!-- /.wrap -->
 '
 
-if (is.null(argv) | length(argv) != 1) {
-  cat("Usage: generateCategory.r pkg1\n")
-  q()
-}
-
-pkgname <- argv[1]
 out <- file.path("category", sprintf("%s.md", pkgname))
 
 # Note that categories are downcase
