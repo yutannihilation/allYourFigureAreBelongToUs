@@ -13,7 +13,7 @@ ofile <- opts[["OUTPUT"]]
 
 
 # fall back on '/' if baseurl is not specified
-baseurl = servr:::jekyll_config('.', 'baseurl', '/')
+baseurl = yaml::yaml.load_file("./_config.yml")$baseurl
 knitr::opts_knit$set(base.url = paste0(baseurl, '/'))
 
 knitr::render_jekyll()
