@@ -5,6 +5,7 @@ OPTION_SERVE :=  --port 1410
 
 CMD_GEN_RMD := ./generateRmd.r
 CMD_GEN_CAT := ./generateCategory.r
+CMD_GEN_IDX := ./generatePagenatedPages.r
 CMD_KNIT     := ./knit.r
 CMD_BUILD    := bundle exec jekyll build
 CMD_SERVE    := bundle exec jekyll serve ${OPTION_SERVE}
@@ -14,7 +15,8 @@ MD = $(patsubst _source/%.Rmd,_posts/%.md,$(wildcard _source/*.Rmd))
 
 all: knit build
 
-generate: 
+generate:
+	${CMD_GEN_IDX} packages.txt
 	while read pkg; do \
 	  echo generating Rmds of $${pkg}...; \
 	  ${CMD_GEN_RMD} $${pkg}; \
