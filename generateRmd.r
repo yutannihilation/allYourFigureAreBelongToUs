@@ -55,7 +55,8 @@ for(Rdname in names(RdDB)) {
 
   rdname <- sub("\\.Rd$", "", Rdname)
 
-  date  <- strftime(Sys.time(), "%Y-%m-%d")
+  # use the date when Zero Wing released on Sega Mega Drive! 
+  date  <- "1991-05-31"
   
   out <- file.path("_source", sprintf("%s-%s.Rmd", date, rdname))
   
