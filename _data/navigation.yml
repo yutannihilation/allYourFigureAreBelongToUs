@@ -1,6 +1,22 @@
-# Site navigation links
-
-- title:
-  url:
-  excerpt:
-  image:
+- page: 1
+  packages: 
+  - name: GGally
+    category: ggally
+  - name: ggdendro
+    category: ggdendro
+  - name: ggExtra
+    category: ggextra
+  - name: ggfortify
+    category: ggfortify
+  - name: ggmcmc
+    category: ggmcmc
+- page: 2
+  packages: 
+  - name: ggparallel
+    category: ggparallel
+  - name: ggthemes
+    category: ggthemes
+  - name: ggthemr
+    category: ggthemr
+  - name: xkcd
+    category: xkcd
