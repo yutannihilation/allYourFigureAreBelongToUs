@@ -61,7 +61,7 @@ for(Rdname in names(RdDB)) {
   out <- file.path("_source", sprintf("%s-%s.Rmd", date, rdname))
   
   # header (Note that categories are normalized to dwoncase by Jekyll anyway)
-  cat(sprintf(header_tmpl, title, rdname, date, tolower(pkgname), pkgname, rdname), file = out)
+  cat(sprintf(header_tmpl, title, rdname, strftime(Sys.time(), "%Y-%m-%d"), tolower(pkgname), pkgname, rdname), file = out)
   
   # codes
   tools::Rd2ex(Rd, f)
