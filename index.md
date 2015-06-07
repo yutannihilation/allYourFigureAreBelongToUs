@@ -4,15 +4,15 @@ permalink: /
 title: "Home"
 ---
 
-{% for cat in site.categories %}
+{% for package in site.data.navigation[0].packages %}
 <div class="wrap">
    <div class="page-title">
-     <a href="{{ site.baseurl }}/{{ cat[0] }}/"><h1>{{ cat[0] }}</h1></a>
+     <a href="{{ site.baseurl }}/{{ package.category }}/"><h1>{{ package.name }}</h1></a>
    </div>
    <div class="archive-wrap">
       <div class="page-content">
          <div class="tiles">
-         {% for post in cat[1] limit:8 %}
+         {% for post in site.categories[package.category] limit:8 %}
             {% include post-grid.html %}
          {% endfor %}
          </div><!-- /.tiles -->
