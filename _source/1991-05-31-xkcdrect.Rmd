@@ -1,0 +1,33 @@
+---
+title: |
+  
+  Plots rectangles
+  
+rdname: xkcdrect
+date: 1991-05-31
+output: html_document
+layout: article
+category: xkcd
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(xkcd)
+```
+
+```{r xkcdrect, cache = TRUE}
+volunteers <- data.frame(year=c(2007:2011),
+                         number=c(56470, 56998,59686, 61783, 64251))
+p <- ggplot() + xkcdrect(aes(xmin = year,
+                             xmax= year +0.3,
+                             ymin=number,
+                             ymax = number + 3600),
+                         volunteers,
+                         fill="red", colour="black")
+p
+
+
+
+```

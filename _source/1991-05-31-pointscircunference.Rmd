@@ -1,0 +1,27 @@
+---
+title: |
+  
+  Calculates a handwritten circunference
+  
+rdname: pointscircunference
+date: 1991-05-31
+output: html_document
+layout: article
+category: xkcd
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(xkcd)
+```
+
+```{r pointscircunference, cache = TRUE}
+plot(pointscircunference(x=0, y=0), ylim=c(-1,1), xlim=c(-1,1))
+plot(pointscircunference(x=0, y=0), ylim=c(-1,1), xlim=c(-2,2))
+plot(pointscircunference(x=0, y=0, ratioxy=2),  ylim=c(-1,1), xlim=c(-2,2))
+
+
+
+```

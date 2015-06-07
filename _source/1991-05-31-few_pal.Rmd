@@ -1,0 +1,27 @@
+---
+title: |
+  Color Palletes from Few's "Practical Rules for Using Color in Charts"
+rdname: few_pal
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r few_pal, cache = TRUE}
+
+library(scales)
+show_col(few_pal()(7))
+show_col(few_pal("dark")(7))
+show_col(few_pal("light")(7))
+
+
+
+```

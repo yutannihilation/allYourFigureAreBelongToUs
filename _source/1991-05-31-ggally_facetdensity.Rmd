@@ -1,0 +1,29 @@
+---
+title: |
+  Plots the density plots by faceting
+rdname: ggally_facetdensity
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggally_facetdensity, cache = TRUE}
+
+data(tips, package = "reshape")
+ ggally_facetdensity(tips, mapping = ggplot2::aes(x = total_bill, y = sex))
+ ggally_facetdensity(
+   tips,
+   mapping = ggplot2::aes_string(y = "total_bill", x = "sex", color = "sex")
+ )
+
+
+
+```

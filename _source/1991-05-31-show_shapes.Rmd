@@ -1,0 +1,25 @@
+---
+title: |
+  Show shapes
+rdname: show_shapes
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r show_shapes, cache = TRUE}
+library(scales)
+show_shapes(shape_pal()(5))
+show_shapes(shape_pal()(3), labels=TRUE)
+
+
+
+```

@@ -1,0 +1,26 @@
+---
+title: |
+  Solarized color palette (discrete)
+rdname: solarized_pal
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r solarized_pal, cache = TRUE}
+library(scales)
+show_col(solarized_pal()(2))
+show_col(solarized_pal()(3))
+show_col(solarized_pal("red")(4))
+
+
+
+```

@@ -1,0 +1,34 @@
+---
+title: |
+  Plots the Scatter Density Plot
+rdname: ggally_density
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggally_density, cache = TRUE}
+
+data(tips, package = "reshape")
+ ggally_density(tips, mapping = ggplot2::aes(x = total_bill, y = tip))
+ ggally_density(tips, mapping = ggplot2::aes_string(x = "total_bill", y = "tip"))
+ ggally_density(
+   tips,
+   mapping = ggplot2::aes_string(x = "total_bill", y = "tip", fill = "..level..")
+ )
+ ggally_density(
+   tips,
+   mapping = ggplot2::aes_string(x = "total_bill", y = "tip", fill = "..level..")
+ ) + ggplot2::scale_fill_gradient(breaks = c(0.05, 0.1,0.15,0.2))
+
+
+
+```

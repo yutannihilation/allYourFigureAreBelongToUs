@@ -1,0 +1,23 @@
+---
+title: |
+  Plot time series against lagged versions of themselves
+rdname: gglagplot
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggfortify
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+```
+
+```{r gglagplot, cache = TRUE}
+gglagplot(AirPassengers)
+
+
+
+```

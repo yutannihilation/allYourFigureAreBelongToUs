@@ -1,0 +1,29 @@
+---
+title: |
+  Tufte's Box Blot
+rdname: geom_tufteboxplot
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r geom_tufteboxplot, cache = TRUE}
+p <- ggplot(mtcars, aes(factor(cyl), mpg))
+## with only a point
+p + geom_tufteboxplot()
+## with a middle box
+p + geom_tufteboxplot(median.type="box", fatten=1)
+## using lines
+p + geom_tufteboxplot(median.type="line")
+
+
+
+```

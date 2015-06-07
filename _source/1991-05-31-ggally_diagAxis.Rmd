@@ -1,0 +1,25 @@
+---
+title: |
+  Internal Axis Labeling Plot for ggpairs
+rdname: ggally_diagAxis
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r ggally_diagAxis, cache = TRUE}
+data(tips, package = "reshape")
+ ggally_diagAxis(tips, ggplot2::aes(x=tip))
+ ggally_diagAxis(tips, ggplot2::aes(x=sex))
+
+
+
+```

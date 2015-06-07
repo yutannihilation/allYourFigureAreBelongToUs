@@ -1,0 +1,33 @@
+---
+title: |
+  Theme based on Few's "Practical Rules for Using Color in Charts"
+rdname: theme_few
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r theme_few, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+(qplot(carat, price, data=dsamp, colour=clarity)
++ theme_few()
++ scale_colour_few())
+(qplot(carat, price, data=dsamp, colour=clarity)
++ theme_few()
++ scale_colour_few("dark"))
+(ggplot(diamonds, aes(clarity, fill=cut))
++ geom_bar()
++ theme_few()
++ scale_fill_few("light"))
+
+
+
+```

@@ -1,0 +1,25 @@
+---
+title: |
+  Density plots comparing the distribution of the whole chain with only its last part.
+rdname: ggs_compare_partial
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_compare_partial, cache = TRUE}
+
+data(linear)
+ggs_compare_partial(ggs(s))
+
+
+
+```

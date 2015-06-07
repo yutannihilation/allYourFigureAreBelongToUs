@@ -1,0 +1,25 @@
+---
+title: |
+  Inverse gray theme
+rdname: theme_igray
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r theme_igray, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+(d <- qplot(carat, price, data=dsamp, colour=clarity)
+               + theme_igray())
+
+
+
+```

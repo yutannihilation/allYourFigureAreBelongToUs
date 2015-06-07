@@ -1,0 +1,32 @@
+---
+title: |
+  ggplot color theme based on old Excel plots
+rdname: theme_excel
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggthemes
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r theme_excel, cache = TRUE}
+dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
+# Old line color palette
+(qplot(carat, price, data=dsamp, colour=clarity)
+ + theme_excel()
+ + scale_colour_excel() )
+# Old fill color palette
+(ggplot(diamonds, aes(clarity, fill=cut))
++ geom_bar()
++ scale_fill_excel("fill")
++ theme_excel())
+
+
+
+```
