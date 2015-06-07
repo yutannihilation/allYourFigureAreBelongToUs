@@ -1,22 +1,56 @@
 - page: 1
   packages: 
+  - name: choroplethr
+    category: choroplethr
+  - name: cowplot
+    category: cowplot
+  - name: gapmap
+    category: gapmap
   - name: GGally
     category: ggally
   - name: ggdendro
     category: ggdendro
+- page: 2
+  packages: 
+  - name: ggenealogy
+    category: ggenealogy
   - name: ggExtra
     category: ggextra
   - name: ggfortify
     category: ggfortify
   - name: ggmcmc
     category: ggmcmc
-- page: 2
-  packages: 
   - name: ggparallel
     category: ggparallel
+- page: 3
+  packages: 
+  - name: ggRandomForests
+    category: ggrandomforests
+  - name: ggtern
+    category: ggtern
   - name: ggthemes
     category: ggthemes
   - name: ggthemr
     category: ggthemr
+  - name: granovaGG
+    category: granovagg
+- page: 4
+  packages: 
+  - name: gtable
+    category: gtable
+  - name: mapDK
+    category: mapdk
+  - name: MCMC.OTU
+    category: mcmc.otu
+  - name: PairedData
+    category: paireddata
+  - name: popgraph
+    category: popgraph
+- page: 5
+  packages: 
+  - name: sjPlot
+    category: sjplot
+  - name: waffle
+    category: waffle
   - name: xkcd
     category: xkcd

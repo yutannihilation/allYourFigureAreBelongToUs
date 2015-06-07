@@ -36,7 +36,7 @@ $(MD): _posts/%.md: _source/%.Rmd
 	${CMD_KNIT} $^ $@
 
 push:
-	${CMD_GIT} add --all _source/ _posts/ figure/source/ category/
+	${CMD_GIT} add --all _source/ _posts/ figure/source/ category/ index_pages/
 	${CMD_GIT} commit -m "update posts by make push"
 	${CMD_GIT} push origin gh-pages
 
