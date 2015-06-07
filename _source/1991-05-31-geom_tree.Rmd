@@ -1,0 +1,26 @@
+---
+title: |
+  geom_tree
+rdname: geom_tree
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtree
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtree)
+```
+
+```{r geom_tree, cache = TRUE}
+require(ape)
+tr <- rtree(10)
+require(ggplot2)
+ggplot(tr) + geom_tree()
+
+
+
+```

@@ -2,7 +2,7 @@
 title: |
   Economist color palette (discrete)
 rdname: economist_pal
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggthemes

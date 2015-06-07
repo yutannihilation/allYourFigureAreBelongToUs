@@ -2,7 +2,7 @@
 title: |
   Extract line segment and label data from dendrogram or hclust object.
 rdname: dendro_data.dendrogram
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggdendro

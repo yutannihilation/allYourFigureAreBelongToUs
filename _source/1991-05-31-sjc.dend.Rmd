@@ -1,0 +1,30 @@
+---
+title: |
+  Compute hierarchical cluster analysis and visualize group classification
+rdname: sjc.dend
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjc.dend, cache = TRUE}
+
+# Plot dendrogram of hierarchical clustering of mtcars-dataset
+# and show group classification
+sjc.dend(mtcars, 5)
+
+# Plot dendrogram of hierarchical clustering of mtcars-dataset
+# and show group classification for 2 to 4 groups
+sjc.dend(mtcars, 2:4)
+
+
+
+```

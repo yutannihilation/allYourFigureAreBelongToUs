@@ -1,0 +1,25 @@
+---
+title: |
+  Maps of Denmark
+rdname: mapDK
+date: 1991-05-31
+output: html_document
+layout: article
+category: mapdk
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(mapDK)
+```
+
+```{r mapDK, cache = TRUE}
+mapDK(detail = "polling")
+mapDK(detail = "zip")
+mapDK(values = "indbrud", id = "kommune", data = crime)
+
+
+
+```

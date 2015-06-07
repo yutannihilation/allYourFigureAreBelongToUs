@@ -1,0 +1,28 @@
+---
+title: |
+  Veritical, left-aligned layout for waffle plots
+rdname: iron
+date: 1991-05-31
+output: html_document
+layout: article
+category: waffle
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(waffle)
+```
+
+```{r iron, cache = TRUE}
+parts <- c(80, 30, 20, 10)
+w1 <- waffle(parts, rows=8)
+w2 <- waffle(parts, rows=8)
+w3 <- waffle(parts, rows=8)
+chart <- iron(w1, w2, w3)
+# print chart
+
+
+
+```

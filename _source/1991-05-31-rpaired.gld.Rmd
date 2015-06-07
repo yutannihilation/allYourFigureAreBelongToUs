@@ -1,0 +1,29 @@
+---
+title: |
+  
+  Simulate paired samples
+  
+rdname: rpaired.gld
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r rpaired.gld, cache = TRUE}
+rpaired.gld(n=30,r=0.5)
+
+data(lambda.table)
+p<-rpaired.gld(n=30,d1=lambda.table[7,],d2=lambda.table[7,],r=0.5)
+plot(p)
+
+
+
+```

@@ -1,0 +1,29 @@
+---
+title: |
+  Restrict Ternary Limits
+rdname: tern_limits
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r tern_limits, cache = TRUE}
+
+plot <- ggtern(data=data.frame(x=runif(100),
+                               y=runif(100),
+                               z=runif(100)), aes(x,y,z)) +
+        geom_point() +
+        tern_limits(0.7,0.3,0.4)
+plot
+
+
+
+```

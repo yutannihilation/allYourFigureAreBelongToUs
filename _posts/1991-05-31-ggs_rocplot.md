@@ -2,7 +2,7 @@
 title: |
   Receiver-Operator Characteristic (ROC) plot for models with binary outcomes
 rdname: ggs_rocplot
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggmcmc

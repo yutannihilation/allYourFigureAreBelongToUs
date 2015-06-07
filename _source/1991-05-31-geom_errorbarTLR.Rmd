@@ -1,0 +1,34 @@
+---
+title: |
+  Ternary Error Bars
+rdname: geom_errorbarTLR
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r geom_errorbarTLR, cache = TRUE}
+
+#Example with Dummy Data.
+tmp <- data.frame(x=1/3,
+y=1/3,
+z=1/3,
+Min=1/3-1/6,
+Max=1/3+1/6)
+ggtern(data=tmp,aes(x,y,z)) +
+  geom_point() +
+  geom_errorbarT(aes(Tmin=Min,Tmax=Max))+
+  geom_errorbarL(aes(Lmin=Min,Lmax=Max))+
+  geom_errorbarR(aes(Rmin=Min,Rmax=Max))
+
+
+
+```

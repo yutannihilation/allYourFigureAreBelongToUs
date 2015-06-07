@@ -2,7 +2,7 @@
 title: |
   Creates dendrogram plot using ggplot.
 rdname: ggdendrogram
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggdendro

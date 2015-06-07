@@ -1,0 +1,27 @@
+---
+title: |
+  plot method
+rdname: plot-methods
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtree
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtree)
+```
+
+```{r plot-methods, cache = TRUE}
+### ** Examples
+
+file <- system.file("extdata/BEAST", "beast_mcc.tree", package="ggtree")
+beast <- read.beast(file)
+plot(beast, annotation="length_0.95_HPD", branch.length="none") + theme_tree()
+
+
+
+```

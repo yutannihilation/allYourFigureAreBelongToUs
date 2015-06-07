@@ -1,0 +1,12 @@
+th, td {
+	white-space: nowrap;
+	font-size: 0.8em;
+}
+div.dataTables_wrapper {
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+
+td.highlight {
+	background-color: red;
+}

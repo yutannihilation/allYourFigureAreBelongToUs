@@ -1,0 +1,29 @@
+---
+title: |
+  Create a single row gtable.
+rdname: gtable_row
+date: 1991-05-31
+output: html_document
+layout: article
+category: gtable
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(gtable)
+```
+
+```{r gtable_row, cache = TRUE}
+a <- rectGrob(gp = gpar(fill = "red"))
+b <- circleGrob()
+c <- linesGrob()
+gt <- gtable_row("demo", list(a, b, c))
+gt
+plot(gt)
+gtable_show_layout(gt)
+
+
+
+```

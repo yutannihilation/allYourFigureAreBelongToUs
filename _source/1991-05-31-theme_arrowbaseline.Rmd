@@ -1,0 +1,40 @@
+---
+title: |
+  Set The Ternary Arrow Baseline
+rdname: theme_arrowbaseline
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r theme_arrowbaseline, cache = TRUE}
+#Create plot object
+plot <- ggtern(data=data.frame(x=1,y=1,z=1),mapping=aes(x,y,z)) +
+  geom_point() + theme_rgbw() +
+  tern_limits(labels=c(10,20,"","","","","",80,90,100),
+             breaks=seq(0.1,1,by=0.1)) +
+  theme(axis.tern.arrowstart=0.25,axis.tern.arrowfinish=0.75) +
+  theme_ticksoutside() +
+  #to illustrate the actual origin, set arrowsep to zero
+  theme(axis.tern.arrowsep=unit(0,"npc"))
+
+ #Default behaviour
+ plot + theme_arrowbaseline(0)
+ ##Alternatives, Uncomment below
+ #plot + theme_arrowbaseline(1)
+ #plot + theme_arrowbaseline(2)
+ #plot + theme_arrowbaseline("axis")
+ #plot + theme_arrowbaseline("ticks")
+ #plot + theme_arrowbaseline("labels")
+
+
+
+```

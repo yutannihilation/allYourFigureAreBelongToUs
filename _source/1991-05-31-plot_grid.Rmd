@@ -1,0 +1,31 @@
+---
+title: |
+  Arrange multiple plots into a grid
+rdname: plot_grid
+date: 1991-05-31
+output: html_document
+layout: article
+category: cowplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(cowplot)
+```
+
+```{r plot_grid, cache = TRUE}
+p1 <- qplot(1:10, 1:10)
+p2 <- qplot(1:10, (1:10)^2)
+p3 <- qplot(1:10, (1:10)^3)
+p4 <- qplot(1:10, (1:10)^4)
+plot_grid(p1, p2, p3, p4)
+plot_grid(p1, p2, p3, p4, labels=c('A', 'B', 'C', 'D'))
+plot_grid(p1, p2, p3, nrow=3, labels=c('A', 'B', 'C', 'D'), label_size=12)
+plot_grid(p1, NULL, NULL, p2, p3, NULL, ncol=2,
+ labels=c('A', 'B', 'C', 'D', 'E', 'F'), label_size=12)
+
+
+
+```

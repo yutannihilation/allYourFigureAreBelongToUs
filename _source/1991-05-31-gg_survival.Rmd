@@ -1,0 +1,45 @@
+---
+title: |
+  Nonparametric survival estimates.
+rdname: gg_survival
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggrandomforests
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggRandomForests)
+```
+
+```{r gg_survival, cache = TRUE}
+## -------- pbc data
+data(pbc, package="randomForestSRC")
+pbc$time <- pbc$days/364.25
+
+# This is the same as kaplan
+gg_dta <- gg_survival(interval="time", censor="status",
+                     data=pbc)
+
+plot(gg_dta, error="none")
+plot(gg_dta)
+
+# Stratified on treatment variable.
+gg_dta <- gg_survival(interval="time", censor="status",
+                     data=pbc, by="treatment")
+
+plot(gg_dta, error="none")
+plot(gg_dta)
+
+# ...with smaller confidence limits.
+gg_dta <- gg_survival(interval="time", censor="status",
+                     data=pbc, by="treatment", conf.int=.68)
+
+plot(gg_dta, error="lines")
+
+
+
+```

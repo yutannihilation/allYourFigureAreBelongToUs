@@ -1,0 +1,34 @@
+---
+title: |
+  Create a country-level choropleth
+rdname: country_choropleth
+date: 1991-05-31
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r country_choropleth, cache = TRUE}
+# demonstrate default options
+data(df_pop_country)
+country_choropleth(df_pop_country, "2012 World Bank Populate Estimates")
+
+# demonstrate continuous scale
+country_choropleth(df_pop_country, "2012 World Bank Populate Estimates", num_colors=1)
+
+# demonstrate zooming
+country_choropleth(df_pop_country,
+                   "2012 World Bank Population Estimates",
+                   num_colors=1,
+                   zoom=c("united states of america", "canada", "mexico"))
+
+
+
+```

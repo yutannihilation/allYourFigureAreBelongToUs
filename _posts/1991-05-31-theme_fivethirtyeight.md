@@ -2,7 +2,7 @@
 title: |
   Theme inspired by fivethirtyeight.com plots
 rdname: theme_fivethirtyeight
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggthemes

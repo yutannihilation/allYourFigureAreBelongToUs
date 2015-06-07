@@ -2,7 +2,7 @@
 title: |
   Posterior predictive plot comparing the outcome mean vs the distribution of the predicted posterior means.
 rdname: ggs_ppmean
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggmcmc

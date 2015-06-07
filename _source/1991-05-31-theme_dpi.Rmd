@@ -1,0 +1,27 @@
+---
+title: |
+  
+  a ggplot2 theme developed for PDF and PNG
+  
+rdname: theme_dpi
+date: 1991-05-31
+output: html_document
+layout: article
+category: eeptools
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(eeptools)
+```
+
+```{r theme_dpi, cache = TRUE}
+
+qplot(mpg, wt, data=mtcars) # standard
+qplot(mpg, wt, data=mtcars) + theme_dpi()
+
+
+
+```

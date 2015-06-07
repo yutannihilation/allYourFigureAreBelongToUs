@@ -2,7 +2,7 @@
 title: |
   ggscatmat - a traditional scatterplot matrix for purely quantitative variables
 rdname: ggscatmat
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggally

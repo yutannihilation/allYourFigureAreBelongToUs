@@ -1,0 +1,28 @@
+---
+title: |
+  visualizing phylogenetic tree and heterogenous associated data based on grammar of graphics
+  ggtree provides functions for visualizing phylogenetic tree and its associated data in R.
+rdname: ggtree
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtree
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtree)
+```
+
+```{r ggtree, cache = TRUE}
+### ** Examples
+
+require(ape)
+tr <- rtree(10)
+ggtree(tr)
+
+
+
+```

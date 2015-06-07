@@ -1,0 +1,27 @@
+---
+title: |
+  Profile plot
+rdname: paired.plotProfiles
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r paired.plotProfiles, cache = TRUE}
+data(PrisonStress)
+paired.plotProfiles(PrisonStress,"PSSbefore","PSSafter",subjects="Subject",groups="Group")
+
+# Changing the line colour
+paired.plotProfiles(PrisonStress,"PSSbefore","PSSafter")+geom_line(colour="red")
+
+
+
+```

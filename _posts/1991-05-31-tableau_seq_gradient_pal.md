@@ -2,7 +2,7 @@
 title: |
   Tableau sequential colour gradient palettes (continuous)
 rdname: tableau_seq_gradient_pal
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggthemes

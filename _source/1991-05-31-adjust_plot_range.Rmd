@@ -1,0 +1,32 @@
+---
+title: |
+  Adjust y range of ggplot-objects
+rdname: adjust_plot_range
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r adjust_plot_range, cache = TRUE}
+# sample data set
+library(sjmisc)
+data(efc)
+# show frequencies of relationship-variable and
+# retrieve plot object
+gp <- sjp.frq(efc$e15relat, printPlot = FALSE)
+# show current plot
+plot(gp$plot)
+# show adjusted plot
+adjust_plot_range(gp$plot)
+
+
+
+```

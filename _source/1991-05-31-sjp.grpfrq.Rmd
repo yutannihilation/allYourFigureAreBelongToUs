@@ -1,0 +1,71 @@
+---
+title: |
+  Plot grouped or stacked frequencies
+rdname: sjp.grpfrq
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjp.grpfrq, cache = TRUE}
+# histrogram with EUROFAMCARE sample dataset
+library(sjmisc)
+data(efc)
+efc.val <- get_val_labels(efc)
+efc.var <- get_var_labels(efc)
+sjp.grpfrq(efc$e17age,
+           efc$e16sex,
+           title = efc.var['e17age'],
+           type = "hist",
+           showValueLabels = FALSE,
+           showMeanIntercept = TRUE)
+
+# boxplot
+sjp.grpfrq(efc$e17age,
+           efc$e42dep,
+           type = "box")
+
+# -------------------------------------------------
+# auto-detection of value labels and variable names
+# -------------------------------------------------
+# grouped bars using necessary y-limit
+sjp.grpfrq(efc$e42dep,
+           efc$e16sex,
+           title = NULL)
+
+# box plots with interaction variable
+sjp.grpfrq(efc$e17age,
+           efc$e42dep,
+           interactionVar = efc$e16sex,
+           title = paste(efc.var['e17age'],
+                         "by",
+                         efc.var['e42dep'],
+                         "and",
+                         efc.var['e16sex']),
+           axisLabels.x = efc.val[['e17age']],
+           interactionVarLabels = efc.val[['e16sex']],
+           legendTitle = efc.var['e42dep'],
+           legendLabels = efc.val[['e42dep']],
+           type = "box")
+
+# Grouped bar plot ranging from 1 to 28 (though scale starts with 7)
+sjp.grpfrq(efc$neg_c_7,
+           efc$e42dep,
+           showValueLabels = FALSE,
+           startAxisAt = 1)
+# Same grouped bar plot ranging from 7 to 28
+sjp.grpfrq(efc$neg_c_7,
+           efc$e42dep,
+           showValueLabels = FALSE)
+
+
+
+```

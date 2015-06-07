@@ -2,7 +2,7 @@
 title: |
   Theme with nothing other than a background color
 rdname: theme_solid
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggthemes

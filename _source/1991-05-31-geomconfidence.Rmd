@@ -1,0 +1,24 @@
+---
+title: |
+  Confidence Interval
+rdname: geomconfidence
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r geomconfidence, cache = TRUE}
+data(Feldspar)
+  ggtern(data=Feldspar,aes(An,Ab,Or)) + geom_point() + geom_confidence()
+
+
+
+```

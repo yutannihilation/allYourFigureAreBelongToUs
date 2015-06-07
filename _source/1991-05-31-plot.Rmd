@@ -1,0 +1,35 @@
+---
+title: |
+  ~~ Methods for Function plot ~~ 
+rdname: plot
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r plot, cache = TRUE}
+
+data(HorseBeginners)
+pd1<-with(HorseBeginners,paired(Actual,Imaginary))
+plot(pd1)
+plot(pd1,type="BA")
+plot(pd1,type="McNeil")
+plot(pd1,type="profile")
+
+data(Shoulder)
+with(Shoulder,plot(paired(Left,Right),groups=Group))
+with(Shoulder,plot(paired(Left,Right),groups=Group,facet=FALSE))
+with(Shoulder,plot(paired(Left,Right),
+groups=Group,facet=FALSE,type="profile"))+theme_bw()
+
+
+
+```

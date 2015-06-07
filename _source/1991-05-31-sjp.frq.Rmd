@@ -1,0 +1,110 @@
+---
+title: |
+  Plot frequencies of (count) variables
+rdname: sjp.frq
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjp.frq, cache = TRUE}
+# ---------------
+# boxplot
+# ---------------
+sjp.frq(ChickWeight$weight, type = "box")
+
+# ---------------
+# histogram
+# ---------------
+sjp.frq(discoveries, type = "hist", showMeanIntercept = TRUE)
+# histogram with minimal theme and w/o labels
+sjp.frq(discoveries, type = "hist",
+        showMeanIntercept = TRUE,
+        showValueLabels = FALSE)
+
+# ---------------
+# violin plot
+# ---------------
+sjp.frq(ChickWeight$weight, type = "v")
+
+# ---------------
+# bar plot
+# ---------------
+sjp.frq(ChickWeight$Diet)
+
+# ---------------
+# bar plot with EUROFAMCARE sample dataset
+# dataset was importet from an SPSS-file, using:
+# efc <- sjmisc::read_spss("efc.sav", enc = "UTF-8")
+# ---------------
+library(sjmisc)
+data(efc)
+efc.val <- get_val_labels(efc)
+efc.var <- get_var_labels(efc)
+# you may use sjp.setTheme here to change axis textangle
+sjp.frq(as.factor(efc$e15relat),
+        title = efc.var[['e15relat']],
+        axisLabels.x = efc.val['e15relat'])
+
+# bar plot with EUROFAMCARE sample dataset
+# grouped variable
+ageGrp <- group_var(efc$e17age)
+ageGrpLab <- group_labels(efc$e17age)
+sjp.frq(ageGrp,
+        title = efc.var[['e17age']],
+        axisLabels.x = ageGrpLab)
+
+# ---------------
+# box plots with interaction variable
+# the following example is equal to the function call
+# sjp.grpfrq(efc$e17age, efc$e16sex, type = "box")
+# ---------------
+sjp.frq(efc$e17age,
+        title = paste(efc.var[['e17age']],
+                      "by",
+                      efc.var[['e16sex']]),
+        interactionVar = efc$e16sex,
+        interactionVarLabels = efc.val['e16sex'],
+        type = "box")
+
+# -------------------------------------------------
+# auto-detection of value labels and variable names
+# -------------------------------------------------
+# negative impact scale, ranging from 7-28, assuming that
+# variable scale (lowest value) starts with 1
+sjp.frq(efc$neg_c_7, startAxisAt = 1)
+
+# negative impact scale, ranging from 7-28, using
+# automatic detection of start index of x-axis
+sjp.frq(efc$neg_c_7)
+
+# -------------------------------------------------
+# plotting confidence intervals
+# -------------------------------------------------
+sjp.frq(efc$e15relat,
+        type = "dots",
+        showCI = TRUE,
+        sort.frq = "desc",
+        geom.size = 3,
+        coord.flip = TRUE)
+
+# -------------------------------------------------
+# Simulate ggplot-default histogram, using "hist.skipZeros"
+# and adjusted "geom.size".
+# -------------------------------------------------
+sjp.frq(efc$c160age,
+        type = "h",
+        hist.skipZeros = TRUE,
+        geom.size = 1)
+
+
+
+```

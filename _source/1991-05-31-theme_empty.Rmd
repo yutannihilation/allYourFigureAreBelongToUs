@@ -1,0 +1,34 @@
+---
+title: |
+  A blank theme for plotting networks
+rdname: theme_empty
+date: 1991-05-31
+output: html_document
+layout: article
+category: popgraph
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(popgraph)
+```
+
+```{r theme_empty, cache = TRUE}
+data(lopho)
+require(ggplot2)
+require(igraph)
+layout <- layout.fruchterman.reingold( lopho )
+V(lopho)$x <- layout[,1]
+V(lopho)$y <- layout[,2]
+p <- ggplot() + geom_edgeset( aes(x,y), lopho)
+p <- p + geom_nodeset( aes(x,y), lopho )
+p
+p + theme_empty()
+p <- ggplot() + geom_edgeset( aes(x,y,color=weight), lopho)
+p
+
+
+
+```

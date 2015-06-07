@@ -1,0 +1,88 @@
+---
+title: |
+  Predicted response data object
+rdname: gg_rfsrc.rfsrc
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggrandomforests
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggRandomForests)
+```
+
+```{r gg_rfsrc.rfsrc, cache = TRUE}
+## ------------------------------------------------------------
+## classification example
+## ------------------------------------------------------------
+## -------- iris data
+# rfsrc_iris <- rfsrc(Species ~ ., data = iris)
+data(rfsrc_iris, package="ggRandomForests")
+gg_dta<- gg_rfsrc(rfsrc_iris)
+
+plot(gg_dta)
+
+## ------------------------------------------------------------
+## Regression example
+## ------------------------------------------------------------
+## Not run: 
+##D ## -------- air quality data
+##D # rfsrc_airq <- rfsrc(Ozone ~ ., data = airquality, na.action = "na.impute")
+##D data(rfsrc_airq, package="ggRandomForests")
+##D gg_dta<- gg_rfsrc(rfsrc_airq)
+##D 
+##D plot(gg_dta)
+## End(Not run)
+
+## -------- Boston data
+data(rfsrc_Boston, package="ggRandomForests")
+plot(rfsrc_Boston)
+
+## Not run: 
+##D ## -------- mtcars data
+##D data(rfsrc_mtcars, package="ggRandomForests")
+##D gg_dta<- gg_rfsrc(rfsrc_mtcars)
+##D 
+##D plot(gg_dta)
+## End(Not run)
+## ------------------------------------------------------------
+## Survival example
+## ------------------------------------------------------------
+## Not run: 
+##D ## -------- veteran data
+##D ## randomized trial of two treatment regimens for lung cancer
+##D # data(veteran, package = "randomForestSRC")
+##D # rfsrc_veteran <- rfsrc(Surv(time, status) ~ ., data = veteran, ntree = 100)
+##D data(rfsrc_veteran, package = "ggRandomForests")
+##D gg_dta <- gg_rfsrc(rfsrc_veteran)
+##D plot(gg_dta)
+##D 
+##D gg_dta <- gg_rfsrc(rfsrc_veteran, conf.int=.95)
+##D plot(gg_dta)
+##D 
+##D gg_dta <- gg_rfsrc(rfsrc_veteran, by="trt")
+##D plot(gg_dta)
+## End(Not run)
+
+## -------- pbc data
+## We don't run this because of bootstrap confidence limits
+data(rfsrc_pbc, package = "ggRandomForests")
+
+## Not run: 
+##D gg_dta <- gg_rfsrc(rfsrc_pbc)
+##D plot(gg_dta)
+##D 
+##D gg_dta <- gg_rfsrc(rfsrc_pbc, conf.int=.95)
+##D plot(gg_dta)
+## End(Not run)
+
+gg_dta <- gg_rfsrc(rfsrc_pbc, by="treatment")
+plot(gg_dta)
+
+
+
+```

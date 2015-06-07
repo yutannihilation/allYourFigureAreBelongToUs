@@ -2,7 +2,7 @@
 title: |
   ggplot color themes based on the Solarized palette
 rdname: theme_solarized
-date: 1991-05-31
+date: 2015-06-07
 output: html_document
 layout: article
 category: ggthemes

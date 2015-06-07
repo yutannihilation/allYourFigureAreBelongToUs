@@ -1,0 +1,29 @@
+---
+title: |
+  Compute a linear discriminant analysis on classified cluster groups
+rdname: sjc.grpdisc
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjc.grpdisc, cache = TRUE}
+
+# retrieve group classification from hierarchical cluster analysis
+# on the mtcars data set (5 groups)
+groups <- sjc.cluster(mtcars, 5)
+
+# plot goodness of group classificatoin
+sjc.grpdisc(mtcars, groups, 5)
+
+
+
+```

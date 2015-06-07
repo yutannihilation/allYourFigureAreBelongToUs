@@ -1,0 +1,29 @@
+---
+title: |
+  Change Axis labels and legend titles
+rdname: ggtern-labels
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r ggtern-labels, cache = TRUE}
+data(Feldspar)
+plot <- ggtern(data=Feldspar,aes(Ab,An,Or)) +  geom_point() +
+        xlab("ABC") + ylab("DEF") + zlab("GHI")
+
+#Alternatives, and Arrow Label
+plot + Tlab("TOP") + Llab("LHS") + Rlab("RHS") +
+  theme_showarrows() + Wlab("WEIGHT")
+
+
+
+```

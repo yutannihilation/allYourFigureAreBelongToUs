@@ -1,0 +1,27 @@
+---
+title: |
+  Returns the image object to show the heat map of years between the inputted set of vertices
+rdname: plotYearMatrix
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r plotYearMatrix, cache = TRUE}
+
+data(sbGeneal)
+varieties=c("Bedford", "Calland", "Narow", "Pella", "Tokyo", "Young", "Zane")
+p = plotYearMatrix(varieties,sbGeneal,"Variety", "Variety", "Degree")
+p + ggplot2::scale_fill_continuous(low="white", high="darkgreen")
+
+
+
+```

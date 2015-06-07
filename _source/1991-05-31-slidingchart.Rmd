@@ -1,0 +1,24 @@
+---
+title: |
+  Sliding square plot
+rdname: slidingchart
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r slidingchart, cache = TRUE}
+data(PrisonStress)
+with(PrisonStress,slidingchart(paired(PSSbefore,PSSafter)))
+
+
+
+```

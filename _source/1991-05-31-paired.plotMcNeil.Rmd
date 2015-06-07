@@ -1,0 +1,24 @@
+---
+title: |
+  Parallel lines plot
+rdname: paired.plotMcNeil
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r paired.plotMcNeil, cache = TRUE}
+data(PrisonStress)
+paired.plotMcNeil(PrisonStress,"PSSbefore","PSSafter",subjects="Subject")
+
+
+
+```

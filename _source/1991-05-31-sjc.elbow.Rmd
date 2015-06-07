@@ -1,0 +1,24 @@
+---
+title: |
+  Compute elbow values of a k-means cluster analysis
+rdname: sjc.elbow
+date: 1991-05-31
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjc.elbow, cache = TRUE}
+# plot elbow values of mtcars dataset
+sjc.elbow(mtcars)
+
+
+
+```

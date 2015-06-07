@@ -1,0 +1,26 @@
+---
+title: |
+  Create a completely empty theme
+rdname: theme_nothing
+date: 1991-05-31
+output: html_document
+layout: article
+category: cowplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(cowplot)
+```
+
+```{r theme_nothing, cache = TRUE}
+# plot with small amount of remaining padding
+qplot(1:10, (1:10)^2) + theme_nothing()
+# remaining padding removed
+qplot(1:10, (1:10)^2) + theme_nothing() + labs(x = NULL, y = NULL)
+
+
+
+```

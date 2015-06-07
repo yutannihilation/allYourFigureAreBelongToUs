@@ -1,0 +1,26 @@
+---
+title: |
+  Construct the graphic object of the path
+rdname: plotPath
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r plotPath, cache = TRUE}
+data(sbGeneal)
+ig <- dfToIG(sbGeneal)
+p <- getPath("Brim","Bedford",ig,sbGeneal)
+plotPath(p)
+
+
+
+```

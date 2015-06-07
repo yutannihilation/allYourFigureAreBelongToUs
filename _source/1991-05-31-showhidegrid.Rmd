@@ -1,0 +1,43 @@
+---
+title: |
+  Show or Hide Grid
+rdname: showhidegrid
+date: 1991-05-31
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r showhidegrid, cache = TRUE}
+
+### ** Examples
+
+#Load data
+  data(Feldspar)
+  plot <- ggtern(data=Feldspar,aes(Ab,An,Or)) +
+          geom_point()   + #Layer
+          theme_bw()     + #For clarity
+          theme_hidegrid() #Turn off both major and minor
+  plot
+
+  #Demonstrate switching on major, minor and both gridlines
+  plot + theme_showgrid_minor() #show minor only
+  plot + theme_showgrid_major() #show major only
+  plot + theme_showgrid()       #show both major and minor
+
+  #Demonstrate switching OFF major, minor and both gridlines, Uncomment to run
+  #plot <- plot + theme_showgrid() #as before
+  #plot + theme_hidegrid_minor() #show major only (hide minor)
+  #plot + theme_hidegrid_major() #show minor only (hide major)
+  #plot + theme_hidegrid()       #show none (hide both major and minor)
+
+
+
+```

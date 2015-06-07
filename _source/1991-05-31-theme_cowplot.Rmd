@@ -1,0 +1,23 @@
+---
+title: |
+  Create the default cowplot theme
+rdname: theme_cowplot
+date: 1991-05-31
+output: html_document
+layout: article
+category: cowplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(cowplot)
+```
+
+```{r theme_cowplot, cache = TRUE}
+qplot(1:10, (1:10)^2) + theme_cowplot(font_size = 15)
+
+
+
+```

@@ -1,0 +1,27 @@
+---
+title: |
+  Bland-Altman plot
+rdname: paired.plotBA
+date: 1991-05-31
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r paired.plotBA, cache = TRUE}
+data(PrisonStress)
+paired.plotBA(PrisonStress,"PSSbefore","PSSafter")
+
+# Extending the resulting ggplot object by faceting
+paired.plotBA(PrisonStress,"PSSbefore","PSSafter")+facet_grid(~Group)
+
+
+
+```
