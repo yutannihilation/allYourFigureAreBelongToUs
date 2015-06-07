@@ -1,11 +1,14 @@
 <nav role="navigation" id="js-menu" class="sliding-menu-content">
   <h5>{{ site.title }} <span>Table of Contents</span></h5>
   <ul class="menu-item">
-    {% for link in site.data.navigation %}<li>
-      <a href="{{ site.baseurl }}{{ link.url }}">
-        {% if link.image %}<img src="{{ site.baseurl }}/images/{{ link.image }}" alt="teaser" class="teaser">{% endif %}
-        <div class="title">{{ link.title }}</div>
-        {% if link.excerpt %}<p class="excerpt">{{ link.excerpt }}</p>{% endif %}
+    {% for page in site.data.navigation %}<li>
+      <a href="{{ site.baseurl }}/{{ page.page }}">
+        <div class="title">Page {{ page.page }}</div>
+        <p class="excerpt">
+          {% for package in page.packages %}
+          <a href="{{ site.baseurl }}/{{ package.category }}">{{ package.name }}</a>
+          {% endfor %}
+        </p>
       </a>
     </li>{% endfor %}
   </ul>

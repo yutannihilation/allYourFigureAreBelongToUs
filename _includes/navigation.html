@@ -6,6 +6,6 @@
         {% else %}
         {% assign domain = site.baseurl %}
     {% endif %}
-    <li><a href="{{ domain }}/{{ link.page }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.page }}</a></li>
+    <li><a href="{{ domain }}/{{ link.page }}" {% if link.url contains 'http' %}target="_blank"{% endif %} title="{% for package in link.packages %}{{ package.name }}, {% endfor %}">{{ link.page }}</a></li>
   {% endfor %}
 </ul>
