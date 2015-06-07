@@ -14,7 +14,7 @@ This repository is an attempt to create a gallery where we can see example chart
 
 * [Jekyll](http://jekyllrb.com/)
 * [knitr](https://github.com/yihui/servr)
-* [littler](https://github.com/eddelbuettel/littler)
+* [docopt.R](https://github.com/docopt/docopt.R)
 
 ### Procedure
 
@@ -24,7 +24,7 @@ To build this website, there are six steps:
 2. Generate Rmarkdown files by `make generate`. This executes  [generateRmd.r](https://github.com/yutannihilation/allYourFigureAreBelongToUs/blob/gh-pages/generateRmd.r) for all packages written in packages.txt.
 3. Knit markdown files by `make knit`. This executes [knit.r](https://github.com/yutannihilation/allYourFigureAreBelongToUs/blob/gh-pages/knit.r) for all Rmarkdown files.(This script is a forked version of [build.R in knitr-jekyll](https://github.com/yihui/knitr-jekyll/blob/gh-pages/build.R))
 4. Build HTML files by `make build` or `bundle exec jekyll build`
-5. Check the result by `make serve` or `bundle exec jekyll serve` and browse http://localhost:1410/
+5. Check the result by `make serve` or `bundle exec jekyll serve` and browse http://localhost:4000/
 6. Commit and push changes by `make push`.
 
 ## How to Contribute
