@@ -2,15 +2,15 @@
 title: |
   Filter cells by name.
 rdname: gtable_filter
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: gtable
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter/gtable_filter-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter/gtable_filter-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter/gtable_filter-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter/gtable_filter-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter//gtable_filter-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter//gtable_filter-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter//gtable_filter-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_filter//gtable_filter-4.png
 ---
 
 

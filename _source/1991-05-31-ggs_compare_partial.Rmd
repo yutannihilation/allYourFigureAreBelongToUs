@@ -2,7 +2,7 @@
 title: |
   Density plots comparing the distribution of the whole chain with only its last part.
 rdname: ggs_compare_partial
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggmcmc

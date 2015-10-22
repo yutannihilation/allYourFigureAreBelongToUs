@@ -2,7 +2,7 @@
 title: |
   Arrange multiple plots into a grid
 rdname: plot_grid
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: cowplot
@@ -20,11 +20,17 @@ p1 <- qplot(1:10, 1:10)
 p2 <- qplot(1:10, (1:10)^2)
 p3 <- qplot(1:10, (1:10)^3)
 p4 <- qplot(1:10, (1:10)^4)
+# simple grid
 plot_grid(p1, p2, p3, p4)
-plot_grid(p1, p2, p3, p4, labels=c('A', 'B', 'C', 'D'))
-plot_grid(p1, p2, p3, nrow=3, labels=c('A', 'B', 'C', 'D'), label_size=12)
+# simple grid with labels and aligned plots
+plot_grid(p1, p2, p3, p4, labels=c('A', 'B', 'C', 'D'), align="hv")
+# manually setting the number of rows
+plot_grid(p1, p2, p3, nrow=3, labels=c('A', 'B', 'C', 'D'), label_size=12, align="v")
+# missing plots in some grid locations
 plot_grid(p1, NULL, NULL, p2, p3, NULL, ncol=2,
- labels=c('A', 'B', 'C', 'D', 'E', 'F'), label_size=12)
+ labels=c('A', 'B', 'C', 'D', 'E', 'F'), label_size=12, align="v")
+# making rows and columns of different widths/heights
+plot_grid(p1, p2, p3, p4, align='hv', rel_heights=c(2,1), rel_widths=c(1,2))
 
 
 

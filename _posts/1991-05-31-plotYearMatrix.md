@@ -2,12 +2,12 @@
 title: |
   Returns the image object to show the heat map of years between the inputted set of vertices
 rdname: plotYearMatrix
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotYearMatrix/plotYearMatrix-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotYearMatrix//plotYearMatrix-1.png
 ---
 
 

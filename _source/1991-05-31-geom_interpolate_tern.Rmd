@@ -1,0 +1,27 @@
+---
+title: |
+  Ternary Interpolation
+rdname: geom_interpolate_tern
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r geom_interpolate_tern, cache = TRUE}
+
+data(Feldspar)
+ggtern(Feldspar,aes(x=Or,y=An,z=Ab)) +
+geom_interpolate_tern(aes(value=P.Gpa,color=..level..),binwidth=20) +
+geom_point()
+
+
+
+```

@@ -2,19 +2,19 @@
 title: |
   Partial variable dependence object
 rdname: gg_partial
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-5.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-6.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-7.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-8.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-6.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-7.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial//gg_partial-8.png
 ---
 
 
@@ -95,6 +95,21 @@ data(partial_Boston, package="ggRandomForests")
 
 gg_dta <- gg_partial(partial_Boston)
 plot(gg_dta, panel=TRUE)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
 {% endhighlight %}
 
 ![plot of chunk gg_partial](/allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-5.png) 
@@ -191,6 +206,16 @@ ggpart$edema <- NULL
 plot(ggpart, se = FALSE, panel = TRUE)
 {% endhighlight %}
 
+
+
+{% highlight text %}
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+{% endhighlight %}
+
 ![plot of chunk gg_partial](/allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-7.png) 
 
 {% highlight r %}
@@ -201,43 +226,37 @@ plot(pbc_ggpart[["edema"]], panel=TRUE,
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 50 rows containing missing
-## values (geom_point).
+## Warning: Removed 50 rows containing missing values (geom_point).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 39 rows containing missing
-## values (geom_point).
+## Warning: Removed 39 rows containing missing values (geom_point).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 35 rows containing missing
-## values (geom_point).
+## Warning: Removed 35 rows containing missing values (geom_point).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 14 rows containing missing
-## values (geom_point).
+## Warning: Removed 14 rows containing missing values (geom_point).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 32 rows containing missing
-## values (geom_point).
+## Warning: Removed 32 rows containing missing values (geom_point).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 23 rows containing missing
-## values (geom_point).
+## Warning: Removed 23 rows containing missing values (geom_point).
 {% endhighlight %}
 
 ![plot of chunk gg_partial](/allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial/gg_partial-8.png) 

@@ -2,12 +2,12 @@
 title: |
   Plots the Density Plots by Using Diagonal
 rdname: ggally_densityDiag
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_densityDiag/ggally_densityDiag-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_densityDiag//ggally_densityDiag-1.png
 ---
 
 

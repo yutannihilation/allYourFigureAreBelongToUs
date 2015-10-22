@@ -2,14 +2,14 @@
 title: |
   Marginal variable depedance data object.
 rdname: gg_variable.rfsrc
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc/gg_variable.rfsrc-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc/gg_variable.rfsrc-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc/gg_variable.rfsrc-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc//gg_variable.rfsrc-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc//gg_variable.rfsrc-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_variable.rfsrc//gg_variable.rfsrc-3.png
 ---
 
 

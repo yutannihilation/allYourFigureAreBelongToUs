@@ -2,12 +2,12 @@
 title: |
   Plot a path between two vertices over the full genealogy
 rdname: plotPathOnAll
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotPathOnAll/plotPathOnAll-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotPathOnAll//plotPathOnAll-1.png
 ---
 
 
@@ -25,15 +25,13 @@ plotTotalImage
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 39 rows containing missing
-## values (geom_segment).
+## Warning: Removed 39 rows containing missing values (geom_segment).
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Warning in loop_apply(n, do.ply): Removed 41 rows containing missing
-## values (geom_text).
+## Warning: Removed 41 rows containing missing values (geom_text).
 {% endhighlight %}
 
 ![plot of chunk plotPathOnAll](/allYourFigureAreBelongToUs/figure/source/1991-05-31-plotPathOnAll/plotPathOnAll-1.png) 

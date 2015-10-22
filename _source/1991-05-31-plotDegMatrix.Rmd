@@ -2,7 +2,7 @@
 title: |
   Returns the image object to show the heat map of degrees between the inputted set of vertices
 rdname: plotDegMatrix
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy

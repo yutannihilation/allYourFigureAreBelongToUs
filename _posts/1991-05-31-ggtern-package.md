@@ -2,12 +2,12 @@
 title: |
   Ternary Diagrams in R
 rdname: ggtern-package
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggtern
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggtern-package/ggtern-package-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggtern-package//ggtern-package-1.png
 ---
 
 

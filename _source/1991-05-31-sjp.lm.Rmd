@@ -2,7 +2,7 @@
 title: |
   Plot estimates or predicted values of linear models
 rdname: sjp.lm
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
@@ -25,8 +25,9 @@ fit <- lm(airquality$Ozone ~ airquality$Wind + airquality$Temp + airquality$Sola
 # plot estimates with CI
 sjp.lm(fit, gridBreaksAt = 2)
 
-# plot estimates with CI without standardized beta-values
-# and with narrower tick marks (because "gridBreaksAt" was not specified)
+# plot estimates with CI
+# and with narrower tick marks
+# (because "gridBreaksAt" was not specified)
 sjp.lm(fit)
 
 # ---------------------------------------------------
@@ -37,8 +38,6 @@ library(sjmisc)
 data(efc)
 # fit model
 fit <- lm(neg_c_7 ~ quol_5, data=efc)
-# plot regression line
-sjp.lm(fit)
 # plot regression line with label strings
 sjp.lm(fit,
        axisLabels.x = "Quality of life",
@@ -66,6 +65,34 @@ sjp.lm(fit,
 # plotting model assumptions
 # --------------------------
 sjp.lm(fit, type = "ma")
+
+## Not run: 
+##D # --------------------------
+##D # plotting polynomial terms
+##D # --------------------------
+##D library(sjmisc)
+##D data(efc)
+##D # fit sample model
+##D fit <- lm(tot_sc_e ~ c12hour + e17age + e42dep, data = efc)
+##D # "e17age" does not seem to be linear correlated to response
+##D # try to find appropiate polynomial. Grey line (loess smoothed)
+##D # indicates best fit. Looks like x^3 has a good fit.
+##D # (not checked for significance yet).
+##D sjp.poly(fit, "e17age", 2:4, showScatterPlot = FALSE)
+##D # fit new model
+##D fit <- lm(tot_sc_e ~ c12hour + e42dep +
+##D           e17age + I(e17age^2) + I(e17age^3),
+##D           data = efc)
+##D # plot marginal effects of polynomial term
+##D sjp.lm(fit, type = "poly", poly.term = "e17age")
+##D 
+##D 
+##D library(splines)
+##D # fit new model with "splines"-package, "bs"
+##D fit <- lm(tot_sc_e ~ c12hour + e42dep + bs(e17age, 3), data = efc)
+##D # plot marginal effects of polynomial term, same call as above
+##D sjp.lm(fit, type = "poly", poly.term = "e17age")
+## End(Not run)
 
 
 

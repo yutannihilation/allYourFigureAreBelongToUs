@@ -2,18 +2,18 @@
 title: |
   ggplot color theme based on the Economist
 rdname: theme_economist
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-5.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-6.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist/theme_economist-7.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-6.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_economist//theme_economist-7.png
 ---
 
 

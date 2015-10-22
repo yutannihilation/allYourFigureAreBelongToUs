@@ -2,12 +2,12 @@
 title: |
   Data structures for stratified partial coplots
 rdname: gg_partial_coplot.rfsrc
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial_coplot.rfsrc/gg_partial_coplot.rfsrc-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_partial_coplot.rfsrc//gg_partial_coplot.rfsrc-1.png
 ---
 
 

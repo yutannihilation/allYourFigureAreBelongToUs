@@ -2,15 +2,15 @@
 title: |
   Show or Hide Grid
 rdname: showhidegrid
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggtern
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid/showhidegrid-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid/showhidegrid-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid/showhidegrid-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid/showhidegrid-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid//showhidegrid-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid//showhidegrid-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid//showhidegrid-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-showhidegrid//showhidegrid-4.png
 ---
 
 

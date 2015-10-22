@@ -2,14 +2,14 @@
 title: |
   Minimal depth vs VIMP camparison by variable rankings.
 rdname: gg_minimal_vimp
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp/gg_minimal_vimp-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp/gg_minimal_vimp-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp/gg_minimal_vimp-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp//gg_minimal_vimp-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp//gg_minimal_vimp-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_vimp//gg_minimal_vimp-3.png
 ---
 
 

@@ -2,14 +2,14 @@
 title: |
   Plots the Scatter Plot with Smoothing
 rdname: ggally_smooth
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth/ggally_smooth-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth/ggally_smooth-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth/ggally_smooth-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth//ggally_smooth-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth//ggally_smooth-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_smooth//ggally_smooth-3.png
 ---
 
 

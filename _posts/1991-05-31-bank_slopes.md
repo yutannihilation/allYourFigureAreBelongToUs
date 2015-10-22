@@ -2,13 +2,13 @@
 title: |
   Bank Slopes to 45 degrees
 rdname: bank_slopes
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-bank_slopes/bank_slopes-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-bank_slopes/bank_slopes-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-bank_slopes//bank_slopes-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-bank_slopes//bank_slopes-2.png
 ---
 
 
@@ -19,7 +19,7 @@ images:
 x <- seq_along(sunspot.year)
 y <- as.numeric(sunspot.year)
 # Without banking
-m <- qplot(x, y, geom="line")
+m <- qplot(x, y, geom='line')
 m
 {% endhighlight %}
 
@@ -35,7 +35,7 @@ m + coord_fixed(ratio = ratio)
 
 {% highlight r %}
 ## Alternative methods to calculate the banking
-bank_slopes(x, y, method="ms")
+bank_slopes(x, y, method='ms')
 {% endhighlight %}
 
 
@@ -48,7 +48,7 @@ bank_slopes(x, y, method="ms")
 
 {% highlight r %}
 ## Using culling
-bank_slopes(x, y, method="ms", cull=TRUE)
+bank_slopes(x, y, method='ms', cull=TRUE)
 {% endhighlight %}
 
 
@@ -61,7 +61,7 @@ bank_slopes(x, y, method="ms", cull=TRUE)
 
 {% highlight r %}
 ## Average Absolute Slope
-bank_slopes(x, y, method="as")
+bank_slopes(x, y, method='as')
 {% endhighlight %}
 
 
@@ -73,7 +73,7 @@ bank_slopes(x, y, method="as")
 
 
 {% highlight r %}
-bank_slopes(x, y, method="as", cull=TRUE)
+bank_slopes(x, y, method='as', cull=TRUE)
 {% endhighlight %}
 
 
@@ -86,7 +86,7 @@ bank_slopes(x, y, method="as", cull=TRUE)
 
 {% highlight r %}
 ## Average Orientation
-bank_slopes(x, y, method="ao")
+bank_slopes(x, y, method='ao')
 {% endhighlight %}
 
 
@@ -98,7 +98,7 @@ bank_slopes(x, y, method="ao")
 
 
 {% highlight r %}
-bank_slopes(x, y, method="ao", cull=TRUE)
+bank_slopes(x, y, method='ao', cull=TRUE)
 {% endhighlight %}
 
 
@@ -111,7 +111,7 @@ bank_slopes(x, y, method="ao", cull=TRUE)
 
 {% highlight r %}
 ## Average Orientation (Weighted)
-bank_slopes(x, y, method="ao", weight=TRUE)
+bank_slopes(x, y, method='ao', weight=TRUE)
 {% endhighlight %}
 
 
@@ -123,7 +123,7 @@ bank_slopes(x, y, method="ao", weight=TRUE)
 
 
 {% highlight r %}
-bank_slopes(x, y, method="ao", cull=TRUE, weight=TRUE)
+bank_slopes(x, y, method='ao', cull=TRUE, weight=TRUE)
 {% endhighlight %}
 
 
@@ -136,7 +136,7 @@ bank_slopes(x, y, method="ao", cull=TRUE, weight=TRUE)
 
 {% highlight r %}
 ## Global Orientation Resolution
-bank_slopes(x, y, method="gor")
+bank_slopes(x, y, method='gor')
 {% endhighlight %}
 
 
@@ -148,7 +148,7 @@ bank_slopes(x, y, method="gor")
 
 
 {% highlight r %}
-bank_slopes(x, y, method="gor", cull=TRUE)
+bank_slopes(x, y, method='gor', cull=TRUE)
 {% endhighlight %}
 
 
@@ -161,7 +161,7 @@ bank_slopes(x, y, method="gor", cull=TRUE)
 
 {% highlight r %}
 ## Local Orientation Resolution
-bank_slopes(x, y, method="lor")
+bank_slopes(x, y, method='lor')
 {% endhighlight %}
 
 
@@ -173,7 +173,7 @@ bank_slopes(x, y, method="lor")
 
 
 {% highlight r %}
-bank_slopes(x, y, method="lor", cull=TRUE)
+bank_slopes(x, y, method='lor', cull=TRUE)
 {% endhighlight %}
 
 

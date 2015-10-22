@@ -1,8 +1,8 @@
 ---
 title: |
-  Plot beta coefficients of multiple fitted lm's
+  Plot coefficients of multiple fitted lm's
 rdname: sjp.lmm
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
@@ -28,9 +28,10 @@ fit2 <- lm(neg_c_7 ~ c160age + c12hour + c161sex + c172code, data = efc)
 fit3 <- lm(tot_sc_e ~ c160age + c12hour + c161sex + c172code, data = efc)
 
 # plot multiple models
-sjp.lmm(fit1, fit2, fit3, facet.grid = TRUE, fade.ns = FALSE)
+sjp.lmm(fit1, fit2, fit3, facet.grid = TRUE)
 
-# plot multiple models with legend labels and point shapes instead of value  labels
+# plot multiple models with legend labels and
+# point shapes instead of value labels
 sjp.lmm(fit1, fit2, fit3,
          axisLabels.y = c("Carer's Age",
                           "Hours of Care",
@@ -41,15 +42,29 @@ sjp.lmm(fit1, fit2, fit3,
                                      "Services used"),
          showValueLabels = FALSE,
          showPValueLabels = FALSE,
+         fade.ns = TRUE,
          usePShapes = TRUE)
 
-# plot multiple models from nested lists parameter
+# ------------------------------
+# plot multiple models from nested lists argument
+# ------------------------------
 all.models <- list()
 all.models[[1]] <- fit1
 all.models[[2]] <- fit2
 all.models[[3]] <- fit3
 
 sjp.lmm(all.models)
+
+# ------------------------------
+# plot multiple models with different
+# predictors (stepwise inclusion),
+# standardi estimates
+# ------------------------------
+fit1 <- lm(mpg ~ wt + cyl + disp + gear, data = mtcars)
+fit2 <- update(fit1, . ~ . + hp)
+fit3 <- update(fit2, . ~ . + am)
+
+sjp.lmm(fit1, fit2, fit3, type = "std2")
 
 
 

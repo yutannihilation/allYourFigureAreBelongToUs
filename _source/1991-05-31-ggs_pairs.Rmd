@@ -1,0 +1,43 @@
+---
+title: |
+  Create a plot matrix of posterior simulations
+rdname: ggs_pairs
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs_pairs, cache = TRUE}
+data(linear)
+
+# default ggpairs plot
+ggs_pairs(ggs(s))
+
+# change alpha transparency of points
+ggs_pairs(ggs(s), lower=list(params=c(alpha=.2)))
+
+# with too many points, try contours instead
+ggs_pairs(ggs(s), lower=list(continuous="density"))
+
+# histograms instead of univariate densities on diagonal
+ggs_pairs(ggs(s), diag=list(continuous="bar"))
+
+# coloring results according to chains
+ggs_pairs(ggs(s), color="Chain")
+
+# custom points on lower panels, black contours on upper panels
+ggs_pairs(ggs(s),
+  upper=list(continuous="density", params=c(color="black")),
+  lower=list(params=c(alpha=.2, shape=1)))
+
+
+
+```

@@ -2,18 +2,18 @@
 title: |
   Elemental Graphic Display for Contrast Effect of ANOVA
 rdname: granovagg.contr
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: granovagg
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-5.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-6.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr/granovagg.contr-7.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-6.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.contr//granovagg.contr-7.png
 ---
 
 
@@ -376,24 +376,24 @@ granovagg.contr(data.random, contrasts = contr.helmert(8),
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max 
-## -2.2270 -0.7073  0.1021  0.7726  2.7805 
+## -4.3820 -0.5528  0.0547  0.5552  5.1854 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)   
-## (Intercept) -0.01788    0.14838  -0.121  0.90450   
-## Contrast1   -0.09857    0.29676  -0.332  0.74101   
-## Contrast2    0.84677    0.34358   2.465  0.01681 * 
-## Contrast3   -0.12647    0.36273  -0.349  0.72865   
-## Contrast4    0.35195    0.37598   0.936  0.35325   
-## Contrast5   -0.60975    0.38312  -1.592  0.11711   
-## Contrast6   -1.04724    0.38811  -2.698  0.00919 **
-## Contrast7   -0.01996    0.39218  -0.051  0.95959   
+##             Estimate Std. Error t value Pr(>|t|)  
+## (Intercept)  -0.2822     0.1656  -1.704   0.0940 .
+## Contrast1     0.1229     0.3313   0.371   0.7120  
+## Contrast2    -0.1388     0.3835  -0.362   0.7187  
+## Contrast3     0.2475     0.4049   0.611   0.5434  
+## Contrast4     0.5108     0.4197   1.217   0.2286  
+## Contrast5    -0.1296     0.4277  -0.303   0.7630  
+## Contrast6    -0.1215     0.4332  -0.281   0.7801  
+## Contrast7    -0.7683     0.4378  -1.755   0.0847 .
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 1.187 on 56 degrees of freedom
-## Multiple R-squared:  0.2332,	Adjusted R-squared:  0.1373 
-## F-statistic: 2.433 on 7 and 56 DF,  p-value: 0.02999
+## Residual standard error: 1.325 on 56 degrees of freedom
+## Multiple R-squared:  0.08768,	Adjusted R-squared:  -0.02636 
+## F-statistic: 0.7688 on 7 and 56 DF,  p-value: 0.6157
 {% endhighlight %}
 
 
@@ -406,14 +406,14 @@ granovagg.contr(data.random, contrasts = contr.helmert(8),
 
 
 {% highlight text %}
-##               neg     pos    diff stEftSze
-## Contrast1 -0.0833 -0.2805 -0.1971  -0.1661
-## Contrast2 -0.1819  1.0849  1.2668   1.0672
-## Contrast3  0.2403  0.0691 -0.1712  -0.1442
-## Contrast4  0.1975  0.6348  0.4373   0.3684
-## Contrast5  0.2850 -0.4488 -0.7338  -0.6182
-## Contrast6  0.1627 -1.0622 -1.2249  -1.0319
-## Contrast7 -0.0123 -0.0378 -0.0255  -0.0215
+##              neg      pos   diff stEftSze
+## Contrast1 -0.389 -0.14332  0.246    0.185
+## Contrast2 -0.266 -0.47390 -0.208   -0.157
+## Contrast3 -0.335 -0.00435  0.331    0.250
+## Contrast4 -0.253  0.38561  0.638    0.482
+## Contrast5 -0.125 -0.28073 -0.156   -0.118
+## Contrast6 -0.151 -0.29309 -0.142   -0.107
+## Contrast7 -0.171 -1.05054 -0.879   -0.664
 {% endhighlight %}
 
 
@@ -427,14 +427,14 @@ granovagg.contr(data.random, contrasts = contr.helmert(8),
 
 {% highlight text %}
 ##   group group.mean standard.deviation pooled.standard.deviation
-## 1     1   -0.08334             1.5083                     1.187
-## 2     2   -0.28048             1.0235                     1.187
-## 3     3    1.08486             1.4168                     1.187
-## 4     4    0.06913             1.0794                     1.187
-## 5     5    0.63483             0.9599                     1.187
-## 6     6   -0.44883             1.4692                     1.187
-## 7     7   -1.06224             1.0597                     1.187
-## 8     8   -0.03785             0.7580                     1.187
+## 1     1  -0.389113             1.2740                     1.325
+## 2     2  -0.143321             0.6319                     1.325
+## 3     3  -0.473900             0.8075                     1.325
+## 4     4  -0.004354             0.7276                     1.325
+## 5     5   0.385610             2.2285                     1.325
+## 6     6  -0.280731             1.0760                     1.325
+## 7     7  -0.293095             0.7453                     1.325
+## 8     8  -1.050537             2.0402                     1.325
 {% endhighlight %}
 
 

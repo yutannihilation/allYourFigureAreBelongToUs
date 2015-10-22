@@ -2,13 +2,13 @@
 title: |
   Stata color scales
 rdname: scale_stata
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_stata/scale_stata-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_stata/scale_stata-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_stata//scale_stata-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_stata//scale_stata-2.png
 ---
 
 

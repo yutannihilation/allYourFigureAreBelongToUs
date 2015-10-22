@@ -2,14 +2,14 @@
 title: |
   Add new columns in specified position.
 rdname: gtable_add_cols
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: gtable
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols/gtable_add_cols-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols/gtable_add_cols-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols/gtable_add_cols-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols//gtable_add_cols-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols//gtable_add_cols-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_add_cols//gtable_add_cols-3.png
 ---
 
 

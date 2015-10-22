@@ -2,7 +2,7 @@
 title: |
   ROC (Receiver operator curve) data from a classification random forest.
 rdname: gg_roc.rfsrc
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests

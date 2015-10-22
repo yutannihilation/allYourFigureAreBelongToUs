@@ -2,7 +2,7 @@
 title: |
   Highcharts JS theme
 rdname: theme_hc
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
@@ -16,15 +16,15 @@ library(ggthemes)
 ```
 
 ```{r theme_hc, cache = TRUE}
-(qplot(hp, mpg, data = mtcars, geom = "point")
+(qplot(hp, mpg, data = mtcars, geom = 'point')
 + scale_colour_hc()
-+ ggtitle("Diamond Prices")
++ ggtitle('Diamond Prices')
 + theme_hc())
 ## Use a Dark-Unica theme
-(qplot(hp, mpg, data = mtcars, geom = "point")
-+ scale_colour_hc("darkunica")
-+ ggtitle("Diamond Prices")
-+ theme_hc(bgcolor = "darkunica"))
+(qplot(hp, mpg, data = mtcars, geom = 'point')
++ scale_colour_hc('darkunica')
++ ggtitle('Diamond Prices')
++ theme_hc(bgcolor = 'darkunica'))
 
 
 

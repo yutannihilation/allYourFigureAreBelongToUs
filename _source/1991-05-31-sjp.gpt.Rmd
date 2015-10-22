@@ -1,0 +1,34 @@
+---
+title: |
+  Plot grouped proportional tables
+rdname: sjp.gpt
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjp.gpt, cache = TRUE}
+library(sjmisc)
+data(efc)
+
+# the proportion of dependency levels in female
+# elderly, for each family carer's relationship
+# to elderly
+sjp.gpt(efc$e42dep, efc$e16sex, efc$e15relat)
+
+# proportion of educational levels in highest
+# dependency category of elderly, for different
+# care levels
+sjp.gpt(efc$c172code, efc$e42dep, efc$n4pstu)
+
+
+
+```

@@ -2,13 +2,13 @@
 title: |
   Tufte Maximal Data, Minimal Ink Theme
 rdname: theme_tufte
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_tufte/theme_tufte-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_tufte/theme_tufte-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_tufte//theme_tufte-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_tufte//theme_tufte-2.png
 ---
 
 
@@ -38,10 +38,10 @@ images:
 ##D library(extrafont)
 ##D (ggplot(mtcars, aes(wt, mpg))
 ##D  + geom_point() + geom_rangeframe()
-##D  + theme_tufte(base_family="BemboStd"))
+##D  + theme_tufte(base_family='BemboStd'))
 ##D ## Using the Gill Sans sans serif family
 ##D (ggplot(mtcars, aes(wt, mpg))
 ##D  + geom_point() + geom_rangeframe()
-##D  + theme_tufte(base_family="GillSans"))
+##D  + theme_tufte(base_family='GillSans'))
 ## End(Not run)
 {% endhighlight %}

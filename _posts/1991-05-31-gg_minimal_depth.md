@@ -2,14 +2,14 @@
 title: |
   Minimal depth data object (list("randomForestSRC::var.select"))
 rdname: gg_minimal_depth
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth/gg_minimal_depth-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth/gg_minimal_depth-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth/gg_minimal_depth-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth//gg_minimal_depth-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth//gg_minimal_depth-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_minimal_depth//gg_minimal_depth-3.png
 ---
 
 

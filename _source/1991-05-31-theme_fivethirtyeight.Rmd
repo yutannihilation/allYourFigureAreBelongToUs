@@ -2,7 +2,7 @@
 title: |
   Theme inspired by fivethirtyeight.com plots
 rdname: theme_fivethirtyeight
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
@@ -16,7 +16,8 @@ library(ggthemes)
 ```
 
 ```{r theme_fivethirtyeight, cache = TRUE}
-(qplot(hp, mpg, data= subset(mtcars, cyl != 5), geom="point", color = factor(cyl))
+(qplot(hp, mpg, data= subset(mtcars, cyl != 5),
+        geom="point", color = factor(cyl))
  + ggtitle("Horsepower, mpg and cylinders")
  + geom_smooth(method = "lm", se = FALSE)
  + scale_color_fivethirtyeight()

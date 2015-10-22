@@ -2,7 +2,7 @@
 title: |
   Plot (grouped) scatter plots
 rdname: sjp.scatter
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
@@ -33,20 +33,20 @@ sjp.scatter(efc$c160age, efc$e17age, efc$e42dep)
 sjp.scatter(efc$e16sex,efc$neg_c_7, efc$c172code, showRug = TRUE)
 
 # grouped and labelled scatter plot, not using the auto-detection
-# of labels, but instead pass labels as parameters
+# of labels, but instead pass labels as arguments
 sjp.scatter(efc$c160age, efc$e17age, efc$e42dep,
             title = "Scatter Plot",
-            legendTitle = get_var_labels(efc)['e42dep'],
-            legendLabels = get_val_labels(efc)[['e42dep']],
-            axisTitle.x = get_var_labels(efc)['c160age'],
-            axisTitle.y = get_var_labels(efc)['e17age'],
+            legendTitle = get_label(efc)['e42dep'],
+            legendLabels = get_labels(efc)[['e42dep']],
+            axisTitle.x = get_label(efc)['c160age'],
+            axisTitle.y = get_label(efc)['e17age'],
             showGroupFitLine = TRUE)
 
 # grouped and labelled scatter plot as facets
 sjp.scatter(efc$c160age,efc$e17age, efc$e42dep,
             showGroupFitLine = TRUE,
             facet.grid = TRUE,
-            showSE = TRUE)
+            show.se = TRUE)
 
 # plot residuals of fitted models
 fit <- lm(neg_c_7 ~ quol_5, data = efc)
@@ -55,6 +55,13 @@ sjp.scatter(y = fit$residuals, showTotalFitLine = TRUE)
 # "hide" axis titles
 sjp.scatter(efc$c160age, efc$e17age, efc$e42dep,
             title = "", axisTitle.x = "", axisTitle.y = "")
+
+# plot text labels
+pl <- c(1:10)
+for (i in 1:10) pl[i] <- paste(sample(c(0:9, letters, LETTERS),
+                                      8, replace = TRUE),
+                               collapse = "")
+sjp.scatter(runif(10), runif(10), pointLabels = pl)
 
 
 

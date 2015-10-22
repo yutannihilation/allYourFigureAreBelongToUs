@@ -2,7 +2,7 @@
 title: |
   Separation plot for models with binary response variables
 rdname: ggs_separation
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggmcmc

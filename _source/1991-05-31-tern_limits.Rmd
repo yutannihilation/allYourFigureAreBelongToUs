@@ -2,7 +2,7 @@
 title: |
   Restrict Ternary Limits
 rdname: tern_limits
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggtern

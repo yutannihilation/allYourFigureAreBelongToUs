@@ -2,14 +2,14 @@
 title: |
   Correlation from the Scatter Plot
 rdname: ggally_cor
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor/ggally_cor-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor/ggally_cor-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor/ggally_cor-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor//ggally_cor-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor//ggally_cor-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_cor//ggally_cor-3.png
 ---
 
 
@@ -37,6 +37,13 @@ data(tips, package = "reshape")
    mapping = ggplot2::aes_string(x = "total_bill", y = "tip", color = "sex"),
    size = 5
  )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in stri_c(..., sep = sep, collapse = collapse, ignore_null =
+## TRUE): longer object length is not a multiple of shorter object length
 {% endhighlight %}
 
 

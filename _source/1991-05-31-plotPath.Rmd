@@ -2,7 +2,7 @@
 title: |
   Construct the graphic object of the path
 rdname: plotPath
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy

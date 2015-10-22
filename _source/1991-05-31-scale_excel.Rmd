@@ -2,7 +2,7 @@
 title: |
   Excel color scales
 rdname: scale_excel
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
@@ -19,7 +19,7 @@ library(ggthemes)
 dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
 (qplot(carat, price, data=dsamp, colour=clarity)
  + theme_igray()
- + scale_colour_excel("new"))
+ + scale_colour_excel('new'))
 
 
 

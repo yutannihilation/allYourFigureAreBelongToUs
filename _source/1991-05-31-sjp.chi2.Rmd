@@ -2,7 +2,7 @@
 title: |
   Plot Pearson's Chi2-Test of multiple contingency tables
 rdname: sjp.chi2
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot

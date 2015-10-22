@@ -2,13 +2,13 @@
 title: |
   Shape palette from Cleveland "Elements of Graphing Data" (discrete).
 rdname: cleveland_shape_pal
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-cleveland_shape_pal/cleveland_shape_pal-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-cleveland_shape_pal/cleveland_shape_pal-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-cleveland_shape_pal//cleveland_shape_pal-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-cleveland_shape_pal//cleveland_shape_pal-2.png
 ---
 
 

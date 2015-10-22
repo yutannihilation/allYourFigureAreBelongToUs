@@ -2,7 +2,7 @@
 title: |
   Solarized color palette (discrete)
 rdname: solarized_pal
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
@@ -19,7 +19,7 @@ library(ggthemes)
 library(scales)
 show_col(solarized_pal()(2))
 show_col(solarized_pal()(3))
-show_col(solarized_pal("red")(4))
+show_col(solarized_pal('red')(4))
 
 
 

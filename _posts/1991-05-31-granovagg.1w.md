@@ -2,17 +2,17 @@
 title: |
   Elemental Graphic Display for One-Way ANOVA
 rdname: granovagg.1w
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: granovagg
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-5.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w/granovagg.1w-6.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-granovagg.1w//granovagg.1w-6.png
 ---
 
 
@@ -448,17 +448,6 @@ res = TRUE)
 
 data(chickwts)
 ?chickwts # An explanation of the chickwts dataset
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## starting httpd help server ... done
-{% endhighlight %}
-
-
-
-{% highlight r %}
 with(chickwts, granovagg.1w(weight, group = feed)) # Modeling weight as explained by feed type
 {% endhighlight %}
 

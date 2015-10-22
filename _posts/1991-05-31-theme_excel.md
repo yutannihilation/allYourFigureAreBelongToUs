@@ -2,13 +2,13 @@
 title: |
   ggplot color theme based on old Excel plots
 rdname: theme_excel
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_excel/theme_excel-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_excel/theme_excel-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_excel//theme_excel-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-theme_excel//theme_excel-2.png
 ---
 
 
@@ -28,7 +28,7 @@ dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
 # Old fill color palette
 (ggplot(diamonds, aes(clarity, fill=cut))
 + geom_bar()
-+ scale_fill_excel("fill")
++ scale_fill_excel('fill')
 + theme_excel())
 {% endhighlight %}
 

@@ -2,7 +2,7 @@
 title: |
   Plot contingency tables
 rdname: sjp.xtab
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
@@ -17,23 +17,24 @@ library(sjPlot)
 
 ```{r sjp.xtab, cache = TRUE}
 # create 4-category-items
-grp <- sample(1:4, 100, replace=TRUE)
+grp <- sample(1:4, 100, replace = TRUE)
 # create 3-category-items
-var <- sample(1:3, 100, replace=TRUE)
+x <- sample(1:3, 100, replace = TRUE)
 
-# plot "cross tablulation" of var and grp
-sjp.xtab(var, grp)
+# plot "cross tablulation" of x and grp
+sjp.xtab(x, grp)
 
 # plot "cross tablulation" of x and y, including labels
-sjp.xtab(var, grp,
+sjp.xtab(x, grp,
          axisLabels.x = c("low", "mid", "high"),
          legendLabels = c("Grp 1", "Grp 2", "Grp 3", "Grp 4"))
 
-# plot "cross tablulation" of var and grp
+# plot "cross tablulation" of x and grp
 # as stacked proportional bars
-sjp.xtab(var, grp,
+sjp.xtab(x, grp,
          tableIndex = "row",
          barPosition = "stack",
+         showTableSummary = TRUE,
          coord.flip = TRUE)
 
 # example with vertical labels
@@ -45,15 +46,14 @@ library(ggplot2)
 update_geom_defaults('text', list(hjust = -0.1))
 sjp.xtab(efc$e42dep,
          efc$e16sex,
-         showTableSummary = FALSE,
          labelPos = "center")
 
 # grouped bars with EUROFAMCARE sample dataset
 # dataset was importet from an SPSS-file,
 # see ?sjmisc::read_spss
 data(efc)
-efc.val <- get_val_labels(efc)
-efc.var <- get_var_labels(efc)
+efc.val <- get_labels(efc)
+efc.var <- get_label(efc)
 
 sjp.xtab(efc$e42dep,
          efc$e16sex,

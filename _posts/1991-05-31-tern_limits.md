@@ -2,12 +2,12 @@
 title: |
   Restrict Ternary Limits
 rdname: tern_limits
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggtern
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-tern_limits/tern_limits-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-tern_limits//tern_limits-1.png
 ---
 
 

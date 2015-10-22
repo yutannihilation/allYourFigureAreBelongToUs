@@ -2,16 +2,16 @@
 title: |
   Nonparametric survival estimates.
 rdname: gg_survival
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggrandomforests
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival/gg_survival-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival/gg_survival-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival/gg_survival-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival/gg_survival-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival/gg_survival-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival//gg_survival-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival//gg_survival-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival//gg_survival-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival//gg_survival-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gg_survival//gg_survival-5.png
 ---
 
 

@@ -4,7 +4,7 @@ title: |
   Analyzes multivariate counts data using poisson-lognormal mixed model
   
 rdname: mcmc.otu
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: mcmc.otu

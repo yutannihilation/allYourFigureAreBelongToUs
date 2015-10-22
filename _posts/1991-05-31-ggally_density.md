@@ -2,15 +2,15 @@
 title: |
   Plots the Scatter Density Plot
 rdname: ggally_density
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density/ggally_density-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density/ggally_density-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density/ggally_density-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density/ggally_density-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density//ggally_density-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density//ggally_density-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density//ggally_density-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_density//ggally_density-4.png
 ---
 
 

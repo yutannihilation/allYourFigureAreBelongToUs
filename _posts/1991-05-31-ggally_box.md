@@ -2,14 +2,14 @@
 title: |
   Plots the Box Plot
 rdname: ggally_box
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box/ggally_box-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box/ggally_box-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box/ggally_box-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box//ggally_box-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box//ggally_box-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_box//ggally_box-3.png
 ---
 
 

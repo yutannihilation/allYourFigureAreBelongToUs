@@ -2,13 +2,13 @@
 title: |
   Adjust y range of ggplot-objects
 rdname: adjust_plot_range
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-adjust_plot_range/adjust_plot_range-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-adjust_plot_range/adjust_plot_range-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-adjust_plot_range//adjust_plot_range-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-adjust_plot_range//adjust_plot_range-2.png
 ---
 
 

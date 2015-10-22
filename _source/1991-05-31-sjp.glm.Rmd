@@ -2,7 +2,7 @@
 title: |
   Plot odds ratios or predicted probabilities of generalized linear models
 rdname: sjp.glm
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: sjplot
@@ -39,7 +39,7 @@ sjp.glm(fitOR, type = "bars", geom.size = .3)
 library(sjmisc)
 data(efc)
 # retrieve predictor variable labels
-labs <- get_var_labels(efc)
+labs <- get_label(efc)
 predlab <- c(labs[['c161sex']],
              paste0(labs[['e42dep']], " (slightly)"),
              paste0(labs[['e42dep']], " (moderate)"),

@@ -2,13 +2,13 @@
 title: |
   Internal Axis Labeling Plot for ggpairs
 rdname: ggally_diagAxis
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggally
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_diagAxis/ggally_diagAxis-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_diagAxis/ggally_diagAxis-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_diagAxis//ggally_diagAxis-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggally_diagAxis//ggally_diagAxis-2.png
 ---
 
 

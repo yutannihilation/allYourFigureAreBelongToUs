@@ -2,17 +2,17 @@
 title: |
   Trim off empty cells.
 rdname: gtable_trim
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: gtable
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-2.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-3.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-4.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-5.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim/gtable_trim-6.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-3.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-4.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-5.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-gtable_trim//gtable_trim-6.png
 ---
 
 

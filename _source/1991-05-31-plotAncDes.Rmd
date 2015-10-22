@@ -2,7 +2,7 @@
 title: |
   Returns the image object to show the ancestors and descendants of a variety
 rdname: plotAncDes
-date: 1991-05-31
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy

@@ -2,13 +2,13 @@
 title: |
   Caterpillar plot with thick and thin CI
 rdname: ggs_caterpillar
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggmcmc
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggs_caterpillar/ggs_caterpillar-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggs_caterpillar/ggs_caterpillar-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggs_caterpillar//ggs_caterpillar-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-ggs_caterpillar//ggs_caterpillar-2.png
 ---
 
 

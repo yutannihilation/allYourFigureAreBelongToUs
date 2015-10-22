@@ -2,13 +2,13 @@
 title: |
   Returns the image object to show the ancestors and descendants of a variety
 rdname: plotAncDes
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggenealogy
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotAncDes/plotAncDes-1.png
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotAncDes/plotAncDes-2.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotAncDes//plotAncDes-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-plotAncDes//plotAncDes-2.png
 ---
 
 

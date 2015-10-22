@@ -2,12 +2,12 @@
 title: |
   Stata linetype palette (discrete)
 rdname: scale_linetype_stata
-date: 2015-06-07
+date: 2015-10-22
 output: html_document
 layout: article
 category: ggthemes
 images:
- - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_linetype_stata/scale_linetype_stata-1.png
+ - /allYourFigureAreBelongToUs/figure/source/1991-05-31-scale_linetype_stata//scale_linetype_stata-1.png
 ---
 
 
@@ -25,7 +25,7 @@ ecm <- ddply(ecm, "variable", transform, value = rescale01(value))
 
 
 {% highlight text %}
-## Error:  関数 "rescale01" を見つけることができませんでした
+## Error in eval(expr, envir, enclos): could not find function "rescale01"
 {% endhighlight %}
 
 
