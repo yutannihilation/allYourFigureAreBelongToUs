@@ -81,7 +81,6 @@ GEM
     titlecase (0.1.1)
     toml (0.1.2)
       parslet (~> 1.5.0)
-    wdm (0.1.0)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -93,7 +92,6 @@ DEPENDENCIES
   jekyll-sitemap (~> 0.6.1)
   octopress (~> 3.0.0.rc.12)
   sass
-  wdm (>= 0.1.0)
 
 BUNDLED WITH
-   1.10.3
+   1.10.6
