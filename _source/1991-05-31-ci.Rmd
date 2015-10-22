@@ -1,0 +1,24 @@
+---
+title: |
+  Calculate Credible Intervals (wide and narrow).
+rdname: ci
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ci, cache = TRUE}
+data(linear)
+ci(ggs(s))
+
+
+
+```

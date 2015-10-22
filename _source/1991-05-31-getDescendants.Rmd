@@ -1,0 +1,27 @@
+---
+title: |
+  Returns a list of the descendants of a particular variety (if they exist)
+rdname: getDescendants
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getDescendants, cache = TRUE}
+
+data(sbGeneal)
+getChild("Essex",sbGeneal)
+getDescendants("Essex", sbGeneal, 1)
+getDescendants("Essex", sbGeneal, 3)
+
+
+
+```

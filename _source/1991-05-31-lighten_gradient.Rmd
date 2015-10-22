@@ -1,0 +1,24 @@
+---
+title: |
+  Make ggthemr gradient lighter
+rdname: lighten_gradient
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggthemr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemr)
+```
+
+```{r lighten_gradient, cache = TRUE}
+ggthemr('dust')
+lighten_gradient(0.2)
+
+
+
+```

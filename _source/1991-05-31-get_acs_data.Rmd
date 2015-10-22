@@ -1,0 +1,35 @@
+---
+title: |
+  Returns a list representing American Community Survey (ACS) estimates
+rdname: get_acs_data
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r get_acs_data, cache = TRUE}
+
+## Not run: 
+##D library(Hmisc) # for cut2
+##D # States with greater than 1M residents
+##D df       = get_acs_data("B01003", "state")[[1]] # population
+##D df$value = cut2(df$value, cuts=c(0,1000000,Inf))
+##D state_choropleth(df, title="States with a population over 1M", legend="Population")
+##D 
+##D # Counties with greater than or greater than 1M residents
+##D df       = get_acs_data("B01003", "county")[[1]] # population
+##D df$value = cut2(df$value, cuts=c(0,1000000,Inf))
+##D county_choropleth(df, title="Counties with a population over 1M", legend="Population")
+## End(Not run)
+
+
+
+```

@@ -1,0 +1,23 @@
+---
+title: |
+  Simulate paired samples
+rdname: rpaired.contaminated
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r rpaired.contaminated, cache = TRUE}
+rpaired.contaminated(n=30,r=0.25)
+
+
+
+```

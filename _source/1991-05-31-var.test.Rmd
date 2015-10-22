@@ -1,0 +1,37 @@
+---
+title: |
+  
+  Tests of variance(s) for normal distribution(s)
+rdname: var.test
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r var.test, cache = TRUE}
+### ** Examples
+
+data(HorseBeginners)
+
+#one sample test
+var.test(HorseBeginners$Actual,ratio=15)
+
+# two independent samples test
+var.test(HorseBeginners$Actual,HorseBeginners$Imaginary)
+
+# two dependent samples test
+var.test(HorseBeginners$Actual,HorseBeginners$Imaginary,paired=TRUE)
+p<-with(HorseBeginners,paired(Actual,Imaginary))
+var.test(p)
+
+
+
+```

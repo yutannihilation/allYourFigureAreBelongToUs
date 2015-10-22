@@ -1,0 +1,24 @@
+---
+title: |
+  Shuffle ggthemr swatch colours
+rdname: shuffle_swatch
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggthemr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggthemr)
+```
+
+```{r shuffle_swatch, cache = TRUE}
+ggthemr('pale')
+shuffle_swatch()
+
+
+
+```

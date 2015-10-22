@@ -1,0 +1,25 @@
+---
+title: |
+  Determine if a variety is a parent of another
+rdname: isParent
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r isParent, cache = TRUE}
+data(sbGeneal)
+isParent("Essex","Young",sbGeneal)
+isParent("Young","Essex",sbGeneal)
+
+
+
+```

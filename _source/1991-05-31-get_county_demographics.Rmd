@@ -1,0 +1,37 @@
+---
+title: |
+  Get a handful of demographic variables on US Counties from the US Census Bureau as a data.frame.
+rdname: get_county_demographics
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r get_county_demographics, cache = TRUE}
+
+## Not run: 
+##D # get some demographic data on US counties from the 2010 5-year ACS
+##D df = get_county_demographics(endyear=2010, span=5)
+##D colnames(df)
+##D 
+##D # analyze the percent of people who are white not hispanic
+##D # a boxplot shows the distribution
+##D boxplot(df$percent_white)
+##D 
+##D # a choropleth map shows the location of the values
+##D # set the 'value' column to be the column we want to render
+##D df$value = df$percent_white
+##D county_choropleth(df)
+## End(Not run)
+
+
+
+```

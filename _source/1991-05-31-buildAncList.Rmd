@@ -1,0 +1,25 @@
+---
+title: |
+  Returns the ancestors of a particular variety (if they exist).
+rdname: buildAncList
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r buildAncList, cache = TRUE}
+data(sbGeneal)
+getParent("Essex", sbGeneal)
+buildAncList("Essex", sbGeneal)
+
+
+
+```

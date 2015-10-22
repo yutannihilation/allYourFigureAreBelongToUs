@@ -1,0 +1,26 @@
+---
+title: |
+  
+  Student's test test for paired data
+  
+rdname: t.test
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r t.test, cache = TRUE}
+data(PrisonStress)
+with(PrisonStress,t.test(paired(PSSbefore,PSSafter)))
+
+
+
+```

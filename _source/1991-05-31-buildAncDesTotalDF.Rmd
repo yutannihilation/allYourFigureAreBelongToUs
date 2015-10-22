@@ -1,0 +1,26 @@
+---
+title: |
+  Returns data frame with plot coordinates of all ancestors and descendants of a variety.
+rdname: buildAncDesTotalDF
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r buildAncDesTotalDF, cache = TRUE}
+
+data(sbGeneal)
+v1="Essex"
+buildAncDesTotalDF(v1, sbGeneal)
+
+
+
+```

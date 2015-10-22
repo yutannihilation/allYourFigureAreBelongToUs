@@ -1,0 +1,44 @@
+---
+title: |
+  Create an admin1-level choropleth for a specified country
+rdname: admin1_choropleth
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r admin1_choropleth, cache = TRUE}
+## Not run: 
+##D 
+##D data(df_japan_census)
+##D head(df_japan_census)
+##D # set the value we want to map to be the 2010 population estimates
+##D df_japan_census$value=df_japan_census$pop_2010
+##D 
+##D # default map of all of japan
+##D admin1_choropleth("japan",
+##D                    df_japan_census,
+##D                    "2010 Japan Population Estimates",
+##D                    "Population")
+##D 
+##D # zoom in on the Kansai region and use a continuous scale
+##D kansai = c("mie", "nara", "wakayama", "kyoto", "osaka", "hyogo", "shiga")
+##D admin1_choropleth("japan",
+##D                    df_japan_census,
+##D                    "2010 Japan Population Estimates",
+##D                    "Population",
+##D                    1,
+##D                    kansai)
+## End(Not run)
+
+
+
+```

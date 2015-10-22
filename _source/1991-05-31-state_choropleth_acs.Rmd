@@ -1,0 +1,30 @@
+---
+title: |
+  Create a US State choropleth from ACS data
+rdname: state_choropleth_acs
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r state_choropleth_acs, cache = TRUE}
+
+## Not run: 
+##D # median income, default parameters
+##D state_choropleth_acs("B19301")
+##D 
+##D # continuous scale, zooming in on New York, New Jersey and Connecticut
+##D state_choropleth_acs("B19301", num_colors=1, zoom=c("new york", "new jersey", "connecticut"))
+## End(Not run)
+
+
+
+```

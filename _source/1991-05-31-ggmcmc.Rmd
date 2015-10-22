@@ -1,0 +1,25 @@
+---
+title: |
+  Wrapper function that creates a single pdf file with all plots that ggmcmc can produce.
+rdname: ggmcmc
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggmcmc, cache = TRUE}
+
+data(linear)
+ggmcmc(ggs(s))  # Directly from a coda object
+
+
+
+```

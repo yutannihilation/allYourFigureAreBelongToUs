@@ -1,0 +1,23 @@
+---
+title: |
+  Plots time-series diagnostics
+rdname: ggtsdiag
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggfortify
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggfortify)
+```
+
+```{r ggtsdiag, cache = TRUE}
+ggtsdiag(arima(AirPassengers))
+
+
+
+```

@@ -1,0 +1,32 @@
+---
+title: |
+  Grambsch test of scale for paired samples
+  
+rdname: grambsch.var.test
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r grambsch.var.test, cache = TRUE}
+### ** Examples
+
+z<-rnorm(20)
+x<-rnorm(20)+z
+y<-(rnorm(20)+z)*2
+grambsch.var.test(x,y)
+
+p<-paired(x,y)
+grambsch.var.test(p)
+
+
+
+```

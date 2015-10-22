@@ -1,0 +1,40 @@
+---
+title: |
+  Animate a list of choropleths
+rdname: choroplethr_animate
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r choroplethr_animate, cache = TRUE}
+
+## Not run: 
+##D data(df_president_ts)
+##D ?df_president_ts # time series of all US presidential elections 1789-2012
+##D 
+##D # create a list of choropleths of presidential election results for each year
+##D choropleths = list()
+##D for (i in 2:(ncol(df_president_ts))) {
+##D   df           = df_president_ts[, c(1, i)]
+##D   colnames(df) = c("region", "value")
+##D   title        = paste0("Presidential Election Results: ", colnames(df_president_ts)[i])
+##D   choropleths[[i-1]] = state_choropleth(df, title=title)
+##D }
+##D 
+##D # set working directory and animate
+##D setwd("~/Desktop")
+##D choroplethr_animate(choropleths)
+## End(Not run)
+
+
+
+```

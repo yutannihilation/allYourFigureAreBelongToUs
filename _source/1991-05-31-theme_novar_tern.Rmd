@@ -1,0 +1,23 @@
+---
+title: |
+  Blank one variable's annotations in ternary plot
+rdname: theme_novar_tern
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r theme_novar_tern, cache = TRUE}
+## Not run: theme_novar_tern("L")
+
+
+
+```

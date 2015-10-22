@@ -1,0 +1,33 @@
+---
+title: |
+  Create a country-level choropleth using data from the World Bank's World Development Indicators (WDI)
+rdname: choroplethr_wdi
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r choroplethr_wdi, cache = TRUE}
+
+## Not run: 
+##D # See http://data.worldbank.org/indicator/SP.POP.TOTL
+##D choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population Estimates", num_colors=1)
+##D 
+##D # See http://data.worldbank.org/indicator/SP.DYN.LE00.IN
+##D choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012, title="2012 Life Expectancy Estimates")
+##D 
+##D # See http://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+##D choroplethr_wdi(code="NY.GDP.PCAP.CD", year=2012, title="2012 Per Capita Income")
+## End(Not run)
+
+
+
+```

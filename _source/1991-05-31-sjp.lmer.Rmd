@@ -1,0 +1,115 @@
+---
+title: |
+  Plot estimates or predicted values of linear mixed effects models
+rdname: sjp.lmer
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjp.lmer, cache = TRUE}
+
+# fit model
+library(lme4)
+fit <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
+
+# simple plot
+sjp.lmer(fit)
+
+# plot fixed effects
+sjp.lmer(fit, type = "fe")
+
+# sort by predictor Days
+sjp.lmer(fit, sort.coef = "Days")
+
+# plot each predictor as own plot
+# sort each plot
+sjp.lmer(fit,
+         facet.grid = FALSE,
+         sort.coef = "sort.all")
+
+
+library(sjmisc)
+data(efc)
+# prepare group variable
+efc$grp = as.factor(efc$e15relat)
+levels(x = efc$grp) <- get_labels(efc$e15relat)
+# data frame for fitted model
+mydf <- data.frame(neg_c_7 = as.numeric(efc$neg_c_7),
+                   sex = as.factor(efc$c161sex),
+                   c12hour = as.numeric(efc$c12hour),
+                   barthel = as.numeric(efc$barthtot),
+                   grp = efc$grp)
+# fit lmer
+fit <- lmer(neg_c_7 ~ sex + c12hour + barthel + (1|grp),
+            data = mydf)
+
+# plot fixed effects
+sjp.lmer(fit, type = "fe")
+
+sjp.lmer(fit,
+         type = "fe.std",
+         sort.coef = TRUE)
+
+# plot fixed effects slopes for
+# each random intercept, but only for
+# coefficient "c12hour"
+sjp.lmer(fit,
+         type = "fe.ri",
+         vars = "c12hour")
+
+# highlight specific grouping levels
+# in this case we compare spouses, children
+# and children-in-law
+sjp.lmer(fit,
+         type = "fe.ri",
+         emph.grp = c(1, 2, 4),
+         vars = "c12hour")
+
+## Not run: 
+##D # --------------------------
+##D # plotting polynomial terms
+##D # --------------------------
+##D # check linear relation between predictors and response
+##D sjp.lmer(fit, type = "fe.pred")
+##D 
+##D # "barthel" does not seem to be linear correlated to response
+##D # try to find appropiate polynomial. Grey line (loess smoothed)
+##D # indicates best fit. Looks like x^4 has the best fit,
+##D # however, x^2 seems to be suitable according to p-values.
+##D sjp.poly(fit, "barthel", 2:4, showScatterPlot = FALSE)
+##D 
+##D # fit new model
+##D fit <- lmer(neg_c_7 ~ sex + c12hour + barthel +
+##D             I(barthel^2) + (1|grp), data = mydf)
+##D 
+##D # plot marginal effects of polynomial term
+##D sjp.lmer(fit, type = "poly", poly.term = "barthel")
+##D 
+##D 
+##D # lme4 complaints about scale of polynomial term, so
+##D # try centering this predictor
+##D mydf$barthel_s <- scale(mydf$barthel, center = TRUE, scale = TRUE)
+##D 
+##D # re-fit model
+##D fit_s <- lmer(neg_c_7 ~ sex + c12hour + barthel_s +
+##D               I(barthel_s^2) + (1|grp), data = mydf)
+##D 
+##D # plot marginal effects of centered, scaled polynomial term
+##D sjp.lmer(fit_s, type = "poly", poly.term = "barthel_s")
+##D 
+##D # scaling also improved p-values
+##D sjt.lmer(fit, fit_s)
+## End(Not run)
+
+
+
+```

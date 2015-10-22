@@ -1,0 +1,26 @@
+---
+title: |
+  Run ggExtra example
+rdname: runExample
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggextra
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggExtra)
+```
+
+```{r runExample, cache = TRUE}
+## Only run this example in interactive R sessions
+if (interactive()) {
+  runExample()
+}
+
+
+
+```

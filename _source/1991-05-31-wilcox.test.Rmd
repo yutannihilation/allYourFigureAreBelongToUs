@@ -1,0 +1,28 @@
+---
+title: |
+  
+  Wilcoxon's signed rank test for paired data
+  
+rdname: wilcox.test
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r wilcox.test, cache = TRUE}
+data(PrisonStress)
+with(PrisonStress,wilcox.test(PSSbefore,PSSafter))
+with(PrisonStress,wilcox.test(PSSbefore,PSSafter,paired=TRUE))
+with(PrisonStress,wilcox.test(paired(PSSbefore,PSSafter)))
+
+
+
+```

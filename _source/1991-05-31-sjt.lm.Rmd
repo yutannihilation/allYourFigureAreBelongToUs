@@ -1,0 +1,237 @@
+---
+title: |
+  Summary of linear regression as HTML table
+rdname: sjt.lm
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.lm, cache = TRUE}
+## Not run: 
+##D # Now fit the models. Note that both models share the same predictors
+##D # and only differ in their dependent variable. See examples of stepwise
+##D # models below at the end.
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # fit first model
+##D fit1 <- lm(barthtot ~ c160age + c12hour + c161sex + c172code, data = efc)
+##D # fit second model
+##D fit2 <- lm(neg_c_7 ~ c160age + c12hour + c161sex + c172code, data = efc)
+##D 
+##D # create and open HTML-table in RStudio Viewer Pane or web browser
+##D # note that we don't need to specify labels for the predictors,
+##D # because these are automatically read
+##D sjt.lm(fit1, fit2)
+##D 
+##D # create and open HTML-table in RStudio Viewer Pane or web browser
+##D # in the following examples, we set labels via argument
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index",
+##D                                    "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"))
+##D 
+##D # show HTML-table, indicating p-values as asterisks
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index",
+##D                                    "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"),
+##D        showStdBeta = TRUE,
+##D        pvaluesAsNumbers = FALSE)
+##D 
+##D # create and open HTML-table in RStudio Viewer Pane or web browser,
+##D # integrate CI in estimate column
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index",
+##D                                    "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"),
+##D        separateConfColumn = FALSE)
+##D 
+##D # show HTML-table, indicating p-values as numbers
+##D # and printing CI in a separate column
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index",
+##D                                    "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"),
+##D        showStdBeta = TRUE)
+##D 
+##D # show HTML-table, indicating p-values as stars
+##D # and integrate CI in estimate column
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index",
+##D                                    "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"),
+##D        showStdBeta = TRUE,
+##D        ci.hyphen = " to ",
+##D        minus.sign = "&minus;",
+##D        pvaluesAsNumbers = FALSE,
+##D        separateConfColumn = FALSE)
+##D 
+##D # ----------------------------------
+##D # connecting two html-tables
+##D # ----------------------------------
+##D # fit two more models
+##D fit3 <- lm(tot_sc_e ~ c160age + c12hour + c161sex + c172code, data=efc)
+##D fit4 <- lm(e42dep ~ c160age + c12hour + c161sex + c172code, data=efc)
+##D 
+##D # create and save first HTML-table
+##D part1 <- sjt.lm(fit1,
+##D                 fit2,
+##D                 labelDependentVariables = c("Barthel-Index",
+##D                                             "Negative Impact"),
+##D                 labelPredictors = c("Carer's Age",
+##D                                     "Hours of Care",
+##D                                     "Carer's Sex",
+##D                                     "Educational Status"))
+##D # create and save second HTML-table
+##D part2 <- sjt.lm(fit3,
+##D                 fit4,
+##D                 labelDependentVariables = c("Service Usage",
+##D                                             "Elder's Dependency"),
+##D                 labelPredictors = c("Carer's Age",
+##D                                     "Hours of Care",
+##D                                     "Carer's Sex",
+##D                                     "Educational Status"))
+##D # browse temporary file
+##D htmlFile <- tempfile(fileext=".html")
+##D write(sprintf("<html><head>%s</head><body>%s<p></p>%s</body></html>",
+##D               part1$page.style,
+##D               part1$page.content,
+##D               part2$page.content),
+##D       file = htmlFile)
+##D viewer <- getOption("viewer")
+##D if (!is.null(viewer)) viewer(htmlFile) else utils::browseURL(htmlFile)
+##D 
+##D # ----------------------------------
+##D # User defined style sheet
+##D # ----------------------------------
+##D sjt.lm(fit1,
+##D        fit2,
+##D        labelDependentVariables = c("Barthel-Index", "Negative Impact"),
+##D        labelPredictors = c("Carer's Age",
+##D                            "Hours of Care",
+##D                            "Carer's Sex",
+##D                            "Educational Status"),
+##D        CSS = list(css.table = "border: 2px solid;",
+##D                   css.tdata = "border: 1px solid;",
+##D                   css.depvarhead = "color:#003399;"))
+##D 
+##D # ----------------------------------
+##D # automatic grouping of predictors
+##D # ----------------------------------
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # make education categorical
+##D efc$c172code <- to_factor(efc$c172code)
+##D 
+##D # fit first model again (with c172code as factor)
+##D fit1 <- lm(barthtot ~ c160age + c12hour + c172code + c161sex, data=efc)
+##D # fit second model again (with c172code as factor)
+##D fit2 <- lm(neg_c_7 ~ c160age + c12hour + c172code + c161sex, data=efc)
+##D 
+##D # plot models, but group by predictors
+##D sjt.lm(fit1,
+##D        fit2,
+##D        group.pred = TRUE)
+##D 
+##D # ----------------------------------------
+##D # compare models with different predictors
+##D # ----------------------------------------
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # make education categorical
+##D efc$c172code <- to_factor(efc$c172code)
+##D # make education categorical
+##D efc$e42dep <- to_factor(efc$e42dep)
+##D 
+##D # fit first model
+##D fit1 <- lm(neg_c_7 ~ c160age + c172code + c161sex, data = efc)
+##D # fit second model
+##D fit2 <- lm(neg_c_7 ~ c160age + c172code + c161sex + c12hour, data = efc)
+##D # fit second model
+##D fit3 <- lm(neg_c_7 ~ c160age + c172code + e42dep + tot_sc_e, data = efc)
+##D 
+##D sjt.lm(fit1, fit2, fit3)
+##D 
+##D 
+##D # ----------------------------------------
+##D # compare models with different predictors
+##D # and grouping
+##D # ----------------------------------------
+##D 
+##D # make cope-index categorical
+##D efc$c82cop1 <- to_fac(efc$c82cop1)
+##D # fit another model
+##D fit4 <- lm(neg_c_7 ~ c160age + c172code + e42dep + tot_sc_e + c82cop1,
+##D            data = efc)
+##D 
+##D sjt.lm(fit1, fit2, fit4, fit3)
+##D 
+##D # show standardized beta only
+##D sjt.lm(fit1, fit2, fit4, fit3,
+##D        showEst = FALSE,
+##D        showStdBeta = TRUE,
+##D        showAIC = TRUE,
+##D        showFStat = TRUE)
+##D 
+##D # -----------------------------------------------------------
+##D # color insanity. just to show that each column has an own
+##D # CSS-tag, so - depending on the stats and values you show -
+##D # you can define column spaces / margins, border etc. to
+##D # visually separate your models in the table
+##D # -----------------------------------------------------------
+##D sjt.lm(fit1, fit2, fit4, fit3,
+##D        showStdBeta = TRUE,
+##D        showAIC = TRUE,
+##D        showFStat = TRUE,
+##D        showStdError = TRUE,
+##D        CSS = list(css.modelcolumn1 = 'color:blue;',
+##D                   css.modelcolumn2 = 'color:red;',
+##D                   css.modelcolumn3 = 'color:green;',
+##D                   css.modelcolumn4 = 'color:#ffff00;',
+##D                   css.modelcolumn5 = 'color:#777777;',
+##D                   css.modelcolumn6 = 'color:#3399cc;'))
+##D 
+##D sjt.lm(fit1, fit2, fit4, fit3,
+##D        showEst = FALSE,
+##D        showStdBeta = TRUE,
+##D        pvaluesAsNumbers = FALSE,
+##D        group.pred = FALSE,
+##D        CSS = list(css.modelcolumn4 = 'border-left:1px solid black;',
+##D                   css.modelcolumn5 = 'padding-right:50px;'))
+## End(Not run)
+
+
+
+```

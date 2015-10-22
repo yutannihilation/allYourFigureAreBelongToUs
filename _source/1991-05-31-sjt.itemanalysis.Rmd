@@ -1,0 +1,55 @@
+---
+title: |
+  Summary of item analysis of an item scale as HTML table
+rdname: sjt.itemanalysis
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.itemanalysis, cache = TRUE}
+# -------------------------------
+# Data from the EUROFAMCARE sample dataset
+# -------------------------------
+library(sjmisc)
+data(efc)
+
+# retrieve variable and value labels
+varlabs <- get_label(efc)
+
+# recveive first item of COPE-index scale
+start <- which(colnames(efc) == "c82cop1")
+# recveive last item of COPE-index scale
+end <- which(colnames(efc) == "c90cop9")
+
+# create data frame with COPE-index scale
+mydf <- data.frame(efc[, c(start:end)])
+colnames(mydf) <- varlabs[c(start:end)]
+
+## Not run: 
+##D sjt.itemanalysis(mydf)
+##D 
+##D # -------------------------------
+##D # auto-detection of labels
+##D # -------------------------------
+##D sjt.itemanalysis(efc[, c(start:end)])
+##D 
+##D # ---------------------------------------
+##D # Compute PCA on Cope-Index, and perform a
+##D # item analysis for each extracted factor.
+##D # ---------------------------------------
+##D factor.groups <- sjt.pca(mydf, no.output = TRUE)$factor.index
+##D sjt.itemanalysis(mydf, factor.groups)
+## End(Not run)
+
+
+
+```

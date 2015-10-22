@@ -1,0 +1,68 @@
+---
+title: |
+  Set global theme options for sjp-functions
+rdname: sjp.setTheme
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjp.setTheme, cache = TRUE}
+## Not run: 
+##D library(sjmisc)
+##D data(efc)
+##D # set sjPlot-defaults, a slightly modification
+##D # of the ggplot base theme
+##D sjp.setTheme()
+##D 
+##D # legends of all plots inside
+##D sjp.setTheme(legend.pos = "top left",
+##D              legend.inside = TRUE)
+##D sjp.xtab(efc$e42dep, efc$e16sex)
+##D 
+##D # Use classic-theme. you may need to
+##D # load the ggplot2-library.
+##D library(ggplot2)
+##D sjp.setTheme(theme = theme_classic())
+##D sjp.frq(efc$e42dep)
+##D 
+##D # adjust value labels
+##D sjp.setTheme(geom.label.size = 3.5,
+##D              geom.label.color = "#3366cc",
+##D              geom.label.angle = 90)
+##D # hjust-aes needs adjustment for this
+##D update_geom_defaults('text', list(hjust = -0.1))
+##D sjp.xtab(efc$e42dep,
+##D          efc$e16sex,
+##D          labelPos = "center")
+##D 
+##D # Create own theme based on classic-theme
+##D sjp.setTheme(base = theme_classic(),
+##D              axis.linecolor = "grey50",
+##D              axis.textcolor = "#6699cc")
+##D sjp.frq(efc$e42dep)
+##D 
+##D # use theme pre-set
+##D sjp.setTheme(theme = "538",
+##D              geom.alpha = 0.8)
+##D library(ggplot2) # for custom base-line
+##D sjp.frq(efc$e42dep,
+##D         geom.color = "#c0392b",
+##D         expand.grid = TRUE,
+##D         printPlot = FALSE)$plot +
+##D   geom_hline(yintercept = 0,
+##D              size = 0.5,
+##D              colour = "black")
+## End(Not run)
+
+
+
+```

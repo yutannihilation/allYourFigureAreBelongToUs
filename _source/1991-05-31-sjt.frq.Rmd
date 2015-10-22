@@ -1,0 +1,80 @@
+---
+title: |
+  Summary of frequencies as HTML table
+rdname: sjt.frq
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.frq, cache = TRUE}
+## Not run: 
+##D # load sample data
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # show frequencies of "e42dep" in RStudio Viewer Pane
+##D # or default web browser
+##D sjt.frq(efc$e42dep)
+##D 
+##D # plot and show frequency table of "e42dep" with labels
+##D sjt.frq(efc$e42dep,
+##D         variableLabels = "Dependency",
+##D         valueLabels = c("independent",
+##D                         "slightly dependent",
+##D                         "moderately dependent",
+##D                         "severely dependent"))
+##D 
+##D # plot frequencies of e42dep, e16sex and c172code in one HTML file
+##D # and show table in RStudio Viewer Pane or default web browser
+##D # Note that valueLabels of multiple variables have to be
+##D # list-objects
+##D sjt.frq(data.frame(efc$e42dep, efc$e16sex, efc$c172code),
+##D         variableLabels = c("Dependency",
+##D                            "Gender",
+##D                            "Education"),
+##D         valueLabels = list(c("independent",
+##D                              "slightly dependent",
+##D                              "moderately dependent",
+##D                              "severely dependent"),
+##D                            c("male", "female"),
+##D                            c("low", "mid", "high")))
+##D 
+##D # -------------------------------
+##D # auto-detection of labels
+##D # due to auto-detection of labels, this works as well
+##D # -------------------------------
+##D sjt.frq(data.frame(efc$e42dep, efc$e16sex, efc$c172code))
+##D 
+##D 
+##D # plot larger scale including zero-counts
+##D # indicating median and quartiles
+##D sjt.frq(efc$neg_c_7,
+##D         highlightMedian = TRUE,
+##D         highlightQuartiles = TRUE)
+##D 
+##D # -------------------------------
+##D # sort frequencies
+##D # -------------------------------
+##D sjt.frq(efc$e42dep, sort.frq = "desc")
+##D 
+##D # --------------------------------
+##D # User defined style sheet
+##D # --------------------------------
+##D sjt.frq(efc$e42dep,
+##D         CSS = list(css.table = "border: 2px solid;",
+##D                    css.tdata = "border: 1px solid;",
+##D                    css.firsttablecol = "color:#003399; font-weight:bold;"))
+## End(Not run)
+
+
+
+```

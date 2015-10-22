@@ -1,0 +1,44 @@
+---
+title: |
+  View structure of labelled data frames
+rdname: view_df
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r view_df, cache = TRUE}
+## Not run: 
+##D # init dataset
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # view variables
+##D view_df(efc)
+##D 
+##D # view variables w/o values and value labels
+##D view_df(efc, showValues = FALSE, showValueLabels = FALSE)
+##D 
+##D # view variables including variable typed, orderd by name
+##D view_df(efc, sortByName = TRUE, showType = TRUE)
+##D 
+##D # ----------------------------------------------------------------
+##D # User defined style sheet
+##D # ----------------------------------------------------------------
+##D view_df(efc,
+##D         CSS = list(css.table = "border: 2px solid;",
+##D                    css.tdata = "border: 1px solid;",
+##D                    css.arc = "color:blue;"))
+## End(Not run)
+
+
+
+```

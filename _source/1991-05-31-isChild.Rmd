@@ -1,0 +1,25 @@
+---
+title: |
+  Determine if a variety is a child of another
+rdname: isChild
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r isChild, cache = TRUE}
+data(sbGeneal)
+isChild("Essex","Young",sbGeneal)
+isChild("Young","Essex",sbGeneal)
+
+
+
+```

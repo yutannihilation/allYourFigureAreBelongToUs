@@ -1,0 +1,24 @@
+---
+title: |
+  Returns the nodes for a full genealogy
+rdname: getNodes
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getNodes, cache = TRUE}
+data(sbGeneal)
+getNodes(sbGeneal)
+
+
+
+```

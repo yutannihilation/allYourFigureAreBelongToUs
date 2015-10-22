@@ -1,0 +1,41 @@
+---
+title: |
+  Create a US County choropleth from ACS data
+rdname: county_choropleth_acs
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r county_choropleth_acs, cache = TRUE}
+
+## Not run: 
+##D # median income, all counties in US
+##D county_choropleth_acs("B19301")
+##D 
+##D # continuous scale, zooing in on all counties in New York, New Jersey and Connecticut
+##D county_choropleth_acs("B19301", num_colors=1, state_zoom=c("new york", "new jersey", "connecticut"))
+##D 
+##D # zooming in on the 5 counties (boroughs) that make up New York City
+##D library(dplyr)
+##D library(choroplethrMaps)
+##D data(county.regions)
+##D 
+##D nyc_county_names=c("kings", "bronx", "new york", "queens", "richmond")
+##D nyc_county_fips = county.regions %>%
+##D   filter(state.name=="new york" & county.name %in% nyc_county_names) %>%
+##D   select(region)
+##D county_choropleth_acs("B19301", num_colors=1, county_zoom=nyc_county_fips$region)
+## End(Not run)
+
+
+
+```

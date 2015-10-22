@@ -1,0 +1,29 @@
+---
+title: |
+  A package to make waffle charts (square pie charts) in R.
+rdname: waffle
+date: 2015-10-22
+output: html_document
+layout: article
+category: waffle
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(waffle)
+```
+
+```{r waffle, cache = TRUE}
+parts <- c(80, 30, 20, 10)
+chart <- waffle(parts, rows=8)
+# print(chart)
+
+parts <- c(One=80, Two=30, Three=20, Four=10)
+chart <- waffle(parts, rows=8)
+# print(chart)
+
+
+
+```

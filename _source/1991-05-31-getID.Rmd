@@ -1,0 +1,24 @@
+---
+title: |
+  Print map ID
+rdname: getID
+date: 2015-10-22
+output: html_document
+layout: article
+category: mapdk
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(mapDK)
+```
+
+```{r getID, cache = TRUE}
+getID()
+getID(detail = "polling")
+
+
+
+```

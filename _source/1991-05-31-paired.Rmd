@@ -1,0 +1,33 @@
+---
+title: |
+  
+  Paired
+  
+rdname: paired
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r paired, cache = TRUE}
+x<-rnorm(15)
+y<-rnorm(15)
+p1<-paired(x,y)
+show(p1)
+
+data(IceSkating)
+p2<-with(IceSkating,paired(Extension,Flexion))
+show(p2)
+
+
+
+
+```

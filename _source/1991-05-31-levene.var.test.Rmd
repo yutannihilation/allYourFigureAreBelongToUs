@@ -1,0 +1,41 @@
+---
+title: |
+  
+  Levene test of scale for paired samples
+  
+rdname: levene.var.test
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r levene.var.test, cache = TRUE}
+
+z<-rnorm(20)
+x<-rnorm(20)+z
+y<-(rnorm(20)+z)*2
+levene.var.test(x,y)
+
+# Some variations
+levene.var.test(x,y,tr=0.2)
+levene.var.test(x,y,location="median")
+
+
+data(anscombe2)
+p<-with(anscombe2,paired(X2,Y2))
+levene.var.test(p)
+
+
+
+
+
+
+```

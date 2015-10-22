@@ -1,0 +1,80 @@
+---
+title: |
+  Summary of contingency tables as HTML table
+rdname: sjt.xtab
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.xtab, cache = TRUE}
+# prepare sample data set
+library(sjmisc)
+data(efc)
+efc.labels <- get_labels(efc)
+
+# print simple cross table w/o labels
+## Not run: 
+##D sjt.xtab(efc$e16sex, efc$e42dep)
+##D 
+##D # print cross table with manually set
+##D # labels and expected values
+##D sjt.xtab(efc$e16sex,
+##D          efc$e42dep,
+##D          variableLabels = c("Elder's gender",
+##D                             "Elder's dependency"),
+##D          valueLabels = list(efc.labels[['e16sex']],
+##D                             efc.labels[['e42dep']]),
+##D          showExpected = TRUE)
+##D 
+##D # print minimal cross table with labels, total col/row highlighted
+##D sjt.xtab(efc$e16sex, efc$e42dep,
+##D          variableLabels = c("Elder's gender", "Elder's dependency"),
+##D          valueLabels = list(efc.labels[['e16sex']], efc.labels[['e42dep']]),
+##D          showHorizontalLine = FALSE,
+##D          showCellPerc = FALSE,
+##D          highlightTotal = TRUE)
+##D 
+##D # -------------------------------
+##D # auto-detection of labels
+##D # -------------------------------
+##D # print cross table with labels and all percentages
+##D sjt.xtab(efc$e16sex, efc$e42dep,
+##D          showRowPerc = TRUE,
+##D          showColPerc = TRUE)
+##D 
+##D # print cross table with labels and all percentages, including
+##D # grouping variable
+##D sjt.xtab(efc$e16sex, efc$e42dep, efc$c161sex,
+##D          variableLabels=c("Elder's gender",
+##D                           "Elder's dependency",
+##D                           "Carer's gender"),
+##D          valueLabels=list(efc.labels[['e16sex']],
+##D                           efc.labels[['e42dep']],
+##D                           efc.labels[['c161sex']]),
+##D          showRowPerc = TRUE,
+##D          showColPerc = TRUE)
+##D 
+##D # ----------------------------------------------------------------
+##D # User defined style sheet
+##D # ----------------------------------------------------------------
+##D sjt.xtab(efc$e16sex, efc$e42dep,
+##D          variableLabels = c("Elder's gender", "Elder's dependency"),
+##D          valueLabels = list(efc.labels[['e16sex']],
+##D                             efc.labels[['e42dep']]),
+##D          CSS = list(css.table = "border: 2px solid;",
+##D                     css.tdata = "border: 1px solid;",
+##D                     css.horline = "border-bottom: double blue;"))
+## End(Not run)
+
+
+
+```

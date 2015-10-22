@@ -1,0 +1,25 @@
+---
+title: |
+  Determine the degree between two varieties
+rdname: getDegree
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getDegree, cache = TRUE}
+data(sbGeneal)
+ig = dfToIG(sbGeneal)
+getDegree("Brim","Bedford",ig,sbGeneal)
+
+
+
+```

@@ -1,0 +1,27 @@
+---
+title: |
+  Summary of Mann-Whitney-Test as HTML table
+rdname: sjt.mwu
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.mwu, cache = TRUE}
+## Not run: 
+##D library(sjmisc)
+##D data(efc)
+##D sjt.mwu(mwu(efc$e17age, efc$e42dep))
+## End(Not run)
+
+
+
+```

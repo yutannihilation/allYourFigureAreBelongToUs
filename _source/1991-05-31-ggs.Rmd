@@ -1,0 +1,30 @@
+---
+title: |
+  Import MCMC samples into a ggs object than can be used by all ggs_* graphical functions.
+rdname: ggs
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ggs, cache = TRUE}
+
+# Assign 'D' to be a data frame suitable for \code{ggmcmc} functions from
+# a coda object called S
+data(linear)
+S <- ggs(s)        # s is a coda object
+
+# Get samples from 'beta' parameters only
+S <- ggs(s, family = "beta")
+
+
+
+```

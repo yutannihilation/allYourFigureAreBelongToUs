@@ -1,0 +1,27 @@
+---
+title: |
+  Show or Hide the Primary/Secondary Ticks
+rdname: theme_showprimary
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggtern
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggtern)
+```
+
+```{r theme_showprimary, cache = TRUE}
+### ** Examples
+
+data(Feldspar)
+plot <- ggtern(data=Feldspar,aes(Ab,An,Or)) + geom_point() +
+  theme_showsecondary()
+
+
+
+```

@@ -1,0 +1,79 @@
+---
+title: |
+  Summary of correlations as HTML table
+rdname: sjt.corr
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.corr, cache = TRUE}
+## Not run: 
+##D # create data frame with 5 random variables
+##D mydf <- data.frame(cbind(runif(10),
+##D                          runif(10),
+##D                          runif(10),
+##D                          runif(10),
+##D                          runif(10)))
+##D 
+##D # plot correlation matrix using circles
+##D sjt.corr(mydf)
+##D 
+##D # -------------------------------
+##D # Data from the EUROFAMCARE sample dataset
+##D # -------------------------------
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # retrieve variable and value labels
+##D varlabs <- get_label(efc)
+##D 
+##D # recveive first item of COPE-index scale
+##D start <- which(colnames(efc) == "c83cop2")
+##D # recveive last item of COPE-index scale
+##D end <- which(colnames(efc) == "c88cop7")
+##D 
+##D # create data frame with COPE-index scale
+##D mydf <- data.frame(efc[, c(start:end)])
+##D colnames(mydf) <- varlabs[c(start:end)]
+##D 
+##D # we have high correlations here, because all items
+##D # belong to one factor. See example from "sjp.pca".
+##D sjt.corr(mydf, pvaluesAsNumbers = TRUE)
+##D 
+##D # -------------------------------
+##D # auto-detection of labels, only lower triangle
+##D # -------------------------------
+##D sjt.corr(efc[, c(start:end)], triangle = "lower")
+##D 
+##D # -------------------------------
+##D # auto-detection of labels, only lower triangle,
+##D # all correlation values smaller than 0.3 are not
+##D # shown in the table
+##D # -------------------------------
+##D sjt.corr(efc[, c(start:end)],
+##D          triangle = "lower",
+##D          val.rm = 0.3)
+##D 
+##D # -------------------------------
+##D # auto-detection of labels, only lower triangle,
+##D # all correlation values smaller than 0.3 are printed
+##D # in blue
+##D # -------------------------------
+##D sjt.corr(efc[, c(start:end)],
+##D          triangle = "lower",
+##D          val.rm = 0.3,
+##D          CSS = list(css.valueremove = 'color:blue;'))
+## End(Not run)
+
+
+
+```

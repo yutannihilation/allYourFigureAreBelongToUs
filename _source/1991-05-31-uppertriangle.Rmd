@@ -1,0 +1,27 @@
+---
+title: |
+  uppertriangle - rearrange dataset as the preparation of ggscatmat function
+rdname: uppertriangle
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r uppertriangle, cache = TRUE}
+
+data(flea)
+head(uppertriangle(flea, columns=2:4))
+head(uppertriangle(flea))
+head(uppertriangle(flea, color="species"))
+
+
+
+```

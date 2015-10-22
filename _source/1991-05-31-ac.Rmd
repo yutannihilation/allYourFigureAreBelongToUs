@@ -1,0 +1,25 @@
+---
+title: |
+  Calculate the autocorrelation of a single chain, for a specified amount of lags
+rdname: ac
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggmcmc
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggmcmc)
+```
+
+```{r ac, cache = TRUE}
+
+# Calculate the autocorrelation of a simple vector
+ac(cumsum(rnorm(10))/10, nLags=4)
+
+
+
+```

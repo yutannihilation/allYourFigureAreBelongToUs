@@ -1,0 +1,26 @@
+---
+title: |
+  Determine the path between two varieties
+rdname: getPath
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getPath, cache = TRUE}
+data(sbGeneal)
+ig = dfToIG(sbGeneal)
+getPath("Brim","Bedford",ig,sbGeneal)
+getPath("Tokyo","Volstate",ig,sbGeneal)
+
+
+
+```

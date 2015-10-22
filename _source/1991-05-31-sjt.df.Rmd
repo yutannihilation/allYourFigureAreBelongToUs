@@ -1,0 +1,67 @@
+---
+title: |
+  Show (description of) data frame as HTML table
+rdname: sjt.df
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.df, cache = TRUE}
+## Not run: 
+##D # init dataset
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # plot efc-data frame summary
+##D sjt.df(efc, alternateRowColors = TRUE)
+##D 
+##D # plot content, first 50 rows of first 5 columns of example data set
+##D sjt.df(efc[1:50, 1:5],
+##D        describe = FALSE,
+##D        stringVariable = "Observation")
+##D 
+##D # plot efc-data frame summary, sorted descending by mean-column
+##D sjt.df(efc,
+##D        orderColumn = "mean",
+##D        orderAscending = FALSE)
+##D 
+##D # plot first 20 rows of first 5 columns of example data set,
+##D # sort by column "e42dep" with alternating row colors
+##D sjt.df(efc[1:20, 1:5],
+##D        alternateRowColors = TRUE,
+##D        orderColumn = "e42dep",
+##D        describe = FALSE)
+##D 
+##D # plot first 20 rows of first 5 columns of example data set,
+##D # sorted by 4th column in descending order.
+##D sjt.df(efc[1:20, 1:5],
+##D        orderColumn = 4,
+##D        orderAscending = FALSE,
+##D        describe = FALSE)
+##D 
+##D # add big mark to thousands
+##D library(datasets)
+##D sjt.df(as.data.frame(WorldPhones), big.mark = ",")
+##D 
+##D # ----------------------------------------------------------------
+##D # User defined style sheet
+##D # ----------------------------------------------------------------
+##D sjt.df(efc,
+##D        alternateRowColor = TRUE,
+##D        CSS = list(css.table = "border: 2px solid #999999;",
+##D                   css.tdata = "border-top: 1px solid;",
+##D                   css.arc = "color:blue;"))
+## End(Not run)
+
+
+
+```

@@ -1,0 +1,27 @@
+---
+title: |
+  lowertriangle - rearrange dataset as the preparation of ggscatmat function
+rdname: lowertriangle
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggally
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(GGally)
+```
+
+```{r lowertriangle, cache = TRUE}
+
+data(flea)
+head(lowertriangle(flea, columns= 2:4))
+head(lowertriangle(flea))
+head(lowertriangle(flea, color="species"))
+
+
+
+```

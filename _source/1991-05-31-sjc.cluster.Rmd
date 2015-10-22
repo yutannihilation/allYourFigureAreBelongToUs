@@ -1,0 +1,27 @@
+---
+title: |
+  Compute hierarchical or kmeans cluster analysis
+rdname: sjc.cluster
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjc.cluster, cache = TRUE}
+# Hierarchical clustering of mtcars-dataset
+groups <- sjc.cluster(mtcars, 5)
+
+# K-means clustering of mtcars-dataset
+groups <- sjc.cluster(mtcars, 5, method="k")
+
+
+
+```

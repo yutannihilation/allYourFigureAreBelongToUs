@@ -1,0 +1,32 @@
+---
+title: |
+  Find points evenly distributed along the vectors values.
+rdname: quantile_pts
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggrandomforests
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggRandomForests)
+```
+
+```{r quantile_pts, cache = TRUE}
+data(rfsrc_Boston)
+
+# To create 6 intervals, we want 7 points.
+# quantile_pts will find balanced intervals
+rm_pts <- quantile_pts(rfsrc_Boston$xvar$rm, groups=6, intervals=TRUE)
+
+# Use cut to create the intervals
+rm_grp <- cut(rfsrc_Boston$xvar$rm, breaks=rm_pts)
+
+summary(rm_grp)
+
+
+
+```

@@ -1,0 +1,27 @@
+---
+title: |
+  
+  Summarizes and plots results of mcmc.otu() function series.
+  
+rdname: OTUsummary
+date: 2015-10-22
+output: html_document
+layout: article
+category: mcmc.otu
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(MCMC.OTU)
+```
+
+```{r OTUsummary, cache = TRUE}
+
+# see example in ?MCMC.OTU
+
+
+
+
+```

@@ -1,0 +1,27 @@
+---
+title: |
+  Returns a list of the ancestors of a particular variety (if they exist)
+rdname: getAncestors
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getAncestors, cache = TRUE}
+
+data(sbGeneal)
+getParent("Essex", sbGeneal)
+getAncestors("Essex", sbGeneal, 1)
+getAncestors("Essex", sbGeneal, 5)
+
+
+
+```

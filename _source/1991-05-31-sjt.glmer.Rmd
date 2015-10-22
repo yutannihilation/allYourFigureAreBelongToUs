@@ -1,0 +1,67 @@
+---
+title: |
+  Summary of generalized linear mixed models as HTML table
+rdname: sjt.glmer
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.glmer, cache = TRUE}
+## Not run: 
+##D library(lme4)
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # create binary response
+##D efc$hi_qol <- dicho(efc$quol_5)
+##D # prepare group variable
+##D efc$grp = as.factor(efc$e15relat)
+##D levels(x = efc$grp) <- get_labels(efc$e15relat)
+##D # data frame for fitted model
+##D mydf <- data.frame(hi_qol = as.factor(efc$hi_qol),
+##D                    sex = as.factor(efc$c161sex),
+##D                    c12hour = as.numeric(efc$c12hour),
+##D                    neg_c_7 = as.numeric(efc$neg_c_7),
+##D                    education = as.factor(efc$c172code),
+##D                    grp = efc$grp)
+##D 
+##D # fit glmer
+##D fit1 <- glmer(hi_qol ~ sex + c12hour + neg_c_7 + (1|grp),
+##D               data = mydf,
+##D               family = binomial("logit"))
+##D fit2 <- glmer(hi_qol ~ sex + c12hour + neg_c_7 + education + (1|grp),
+##D               data = mydf,
+##D               family = binomial("logit"))
+##D 
+##D # print summary table
+##D sjt.glmer(fit1, fit2,
+##D           ci.hyphen = " to ")
+##D 
+##D # print summary table, using different table layout
+##D sjt.glmer(fit1, fit2,
+##D           showAIC = TRUE,
+##D           showConfInt = FALSE,
+##D           showStdError = TRUE,
+##D           pvaluesAsNumbers = FALSE)
+##D 
+##D # print summary table
+##D sjt.glmer(fit1, fit2,
+##D           labelPredictors = c("Elder's gender (female)",
+##D                               "Hours of care per week",
+##D                               "Negative Impact",
+##D                               "Educational level (mid)",
+##D                               "Educational level (high)"))
+## End(Not run)
+
+
+
+```

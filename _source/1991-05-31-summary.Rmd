@@ -1,0 +1,28 @@
+---
+title: |
+  Summary statistics for paired samples
+rdname: summary
+date: 2015-10-22
+output: html_document
+layout: article
+category: paireddata
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(PairedData)
+```
+
+```{r summary, cache = TRUE}
+
+z<-rnorm(20)
+x<-rnorm(20)+z
+y<-rnorm(20)+z+1
+p<-paired(x,y)
+summary(p)
+
+
+
+```

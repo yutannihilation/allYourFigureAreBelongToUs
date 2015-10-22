@@ -1,0 +1,59 @@
+---
+title: |
+  Create a choropleth of US Counties
+rdname: county_choropleth
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r county_choropleth, cache = TRUE}
+## Not run: 
+##D # default parameters
+##D data(df_pop_county)
+##D county_choropleth(df_pop_county,
+##D                   title  = "US 2012 County Population Estimates",
+##D                   legend = "Population")
+##D 
+##D # zoom in on california and add a reference map
+##D county_choropleth(df_pop_county,
+##D                   title         = "California County Population Estimates",
+##D                   legend        = "Population",
+##D                   state_zoom    = "california",
+##D                   reference_map = TRUE)
+##D 
+##D # continuous scale
+##D data(df_pop_county)
+##D county_choropleth(df_pop_county,
+##D                  title      = "US 2012 County Population Estimates",
+##D                  legend     = "Population",
+##D                  num_colors = 1,
+##D                  state_zoom = c("california", "oregon", "washington"))
+##D 
+##D library(dplyr)
+##D library(choroplethrMaps)
+##D data(county.regions)
+##D 
+##D # show the population of the 5 counties (boroughs) that make up New York City
+##D nyc_county_names = c("kings", "bronx", "new york", "queens", "richmond")
+##D nyc_county_fips = county.regions %>%
+##D   filter(state.name == "new york" & county.name %in% nyc_county_names) %>%
+##D   select(region)
+##D county_choropleth(df_pop_county,
+##D                   title        = "Population of Counties in New York City",
+##D                   legend       = "Population",
+##D                   num_colors   = 1,
+##D                   county_zoom = nyc_county_fips$region)
+## End(Not run)
+
+
+
+```

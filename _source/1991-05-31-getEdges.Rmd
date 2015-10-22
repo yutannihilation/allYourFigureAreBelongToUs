@@ -1,0 +1,26 @@
+---
+title: |
+  Returns edges (vertex names and edge weights) for the full genealogy
+rdname: getEdges
+date: 2015-10-22
+output: html_document
+layout: article
+category: ggenealogy
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(ggenealogy)
+```
+
+```{r getEdges, cache = TRUE}
+
+data(sbGeneal)
+ig = dfToIG(sbGeneal)
+getEdges(ig, sbGeneal)
+
+
+
+```

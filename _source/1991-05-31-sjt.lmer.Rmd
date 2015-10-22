@@ -1,0 +1,72 @@
+---
+title: |
+  Summary of linear mixed effects models as HTML table
+rdname: sjt.lmer
+date: 2015-10-22
+output: html_document
+layout: article
+category: sjplot
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(sjPlot)
+```
+
+```{r sjt.lmer, cache = TRUE}
+## Not run: 
+##D library(lme4)
+##D library(sjmisc)
+##D data(efc)
+##D 
+##D # prepare group variable
+##D efc$grp = as.factor(efc$e15relat)
+##D levels(x = efc$grp) <- get_labels(efc$e15relat)
+##D efc$care.level <- as.factor(sjmisc::rec(efc$n4pstu, "0=0;1=1;2=2;3:4=4"))
+##D levels(x = efc$care.level) <- c("none", "I", "II", "III")
+##D 
+##D # data frame for fitted model
+##D mydf <- data.frame(neg_c_7 = as.numeric(efc$neg_c_7),
+##D                    sex = as.factor(efc$c161sex),
+##D                    c12hour = as.numeric(efc$c12hour),
+##D                    barthel = as.numeric(efc$barthtot),
+##D                    education = as.factor(efc$c172code),
+##D                    grp = efc$grp,
+##D                    carelevel = efc$care.level)
+##D 
+##D # fit two sample models
+##D fit1 <- lmer(neg_c_7 ~ sex + c12hour + barthel + (1|grp), data = mydf)
+##D fit2 <- lmer(neg_c_7 ~ sex + c12hour + education + barthel + (1|grp), data = mydf)
+##D fit3 <- lmer(neg_c_7 ~ sex + c12hour + education + barthel +
+##D               (1|grp) +
+##D               (1|carelevel), data = mydf)
+##D 
+##D # print summary table
+##D sjt.lmer(fit1, fit2,
+##D          ci.hyphen = " to ",
+##D          minus.sign = "&minus;")
+##D 
+##D sjt.lmer(fit1, fit2,
+##D          showAIC = TRUE,
+##D          showConfInt = FALSE,
+##D          showStdError = TRUE,
+##D          pvaluesAsNumbers = FALSE)
+##D 
+##D sjt.lmer(fit1, fit2, fit3,
+##D          showAIC = TRUE,
+##D          separateConfColumn = FALSE,
+##D          newLineConf = FALSE)
+##D 
+##D sjt.lmer(fit1, fit2, fit3,
+##D          labelPredictors = c("Elder's gender (female)",
+##D                              "Hours of care per week",
+##D                              "Barthel Index",
+##D                              "Educational level (mid)",
+##D                              "Educational level (high)"))
+## End(Not run)
+
+
+
+```

@@ -1,0 +1,62 @@
+---
+title: |
+  Create a choropleth of US States
+rdname: state_choropleth
+date: 2015-10-22
+output: html_document
+layout: article
+category: choroplethr
+images:
+FRONTFOMATTER_IMAGES
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(ggplot2)
+library(choroplethr)
+```
+
+```{r state_choropleth, cache = TRUE}
+## Not run: 
+##D # default parameters
+##D data(df_pop_state)
+##D state_choropleth(df_pop_state,
+##D                  title  = "US 2012 State Population Estimates",
+##D                  legend = "Population")
+##D 
+##D # choropleth over reference map of continental usa
+##D data(continental_us_states)
+##D state_choropleth(df_pop_state,
+##D                  title         = "US 2012 State Population Estimates",
+##D                  legend        = "Population",
+##D                  zoom          = continental_us_states,
+##D                  reference_map = TRUE)
+##D 
+##D # continuous scale and zoom
+##D data(df_pop_state)
+##D state_choropleth(df_pop_state,
+##D                  title      = "US 2012 State Population Estimates",
+##D                  legend     = "Population",
+##D                  num_colors = 1,
+##D                  zoom       = c("california", "oregon", "washington"))
+##D 
+##D # demonstrate user creating their own discretization of the input
+##D # demonstrate how choroplethr handles character and factor values
+##D data(df_pop_state)
+##D df_pop_state$str = ""
+##D for (i in 1:nrow(df_pop_state))
+##D {
+##D   if (df_pop_state[i,"value"] < 1000000)
+##D   {
+##D     df_pop_state[i,"str"] = "< 1M"
+##D   } else {
+##D     df_pop_state[i,"str"] = "> 1M"
+##D   }
+##D }
+##D df_pop_state$value = df_pop_state$str
+##D state_choropleth(df_pop_state, title = "Which states have less than 1M people?")
+##D 
+## End(Not run)
+
+
+
+```
